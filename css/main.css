@@ -21,11 +21,12 @@ header {
 header .header_contener {
   display: flex;
   width: 100%;
-  max-width: 1298px;
+  max-width: 1320px;
   height: 100%;
   max-height: 40px;
   box-sizing: border-box;
   align-items: center;
+  padding: 0 12px;
 }
 header .header_contener .navigation {
   display: flex;
@@ -80,4 +81,4 @@ header .header_contener .navigation .header_main_menu ul .we {
 
 body {
   background: rgb(237, 237, 237);
-}/*# sourceMappingURL=main.css.map */
+}
