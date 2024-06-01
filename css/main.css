@@ -61,6 +61,7 @@ header .header_contener .navigation .header_main_menu ul li:not(:last-child)::af
   height: 6px;
   transform: rotate(45deg);
   margin: 0 20px;
+  border-radius: 10%;
 }
 header .header_contener .navigation .header_main_menu ul li a {
   color: #ffffff;
@@ -79,4 +80,4 @@ header .header_contener .navigation .header_main_menu ul .we {
 
 body {
   background: rgb(237, 237, 237);
-}/*# sourceMappingURL=main.css.map */
+}
