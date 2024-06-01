@@ -102,6 +102,15 @@ header .header_contener .navigation .header_main_menu ul .we {
   border-radius: 1px;
 }
 
+.footer {
+  width: 100%;
+  background: #191919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
 .container {
   display: flex;
   align-items: flex-start;
