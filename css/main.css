@@ -60,26 +60,38 @@ header .header_contener .navigation .header_main_menu ul li {
 }
 header .header_contener .navigation .header_main_menu ul li:not(:last-child)::after {
   align-self: center;
-  display: inline-block;
   content: "";
   background: #ffffff;
   width: 6px;
   height: 6px;
   transform: rotate(45deg);
-  margin: 0 0;
   border-radius: 20%;
+  margin: 0 20px;
 }
 header .header_contener .navigation .header_main_menu ul li a {
+  position: relative;
   display: block;
   height: 100%;
-  padding: 20px 20px;
   color: #ffffff;
   font-family: "Fira Sans", sans-serif;
   font-size: 600;
   font-style: normal;
 }
 header .header_contener .navigation .header_main_menu ul li a:hover {
-  color: red;
+  color: #8E8E8E;
+}
+header .header_contener .navigation .header_main_menu ul li a:hover::after {
+  width: 100%;
+}
+header .header_contener .navigation .header_main_menu ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ededed;
+  transition: all 0.1s ease;
 }
 header .header_contener .navigation .header_main_menu ul .we {
   display: block;
