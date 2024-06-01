@@ -1,7 +1,7 @@
 header {
     background: #191919;
     height: 100%;
-    padding: 20px auto;
+    padding: 20px 0;
     width: 100%;
     display: flex;
     align-items: center;
@@ -27,7 +27,57 @@ header {
             
             .logo{
             height: 100%;
-            color: #ffffff;
+                a{
+                    h1{
+                        color: #ffffff;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .header_main_menu{
+                ul{
+                    display: flex;
+                    flex-direction: row nowrap;
+                    li{
+                        display: flex;
+                        list-style: none;
+                        &:not(:last-child)::after{
+                            align-self: center;
+                            display: inline-block;
+                            content: "";
+                            background: #ffffff;
+                            width: 6px;
+                            height: 6px;
+                            transform: rotate(45deg);
+                            margin: 0 20px;
+                        }
+                        a{
+                            color: #ffffff;
+                            font-family: "Fira Sans", sans-serif;
+                            font-size: 600;
+                            font-style: normal;
+                        }
+                    }
+                    // li:not(:last-child)::after{
+                    //     display: inline-block;
+                    //     content: "";
+                    //     background: #ffffff;
+                    //     width: 6px;
+                    //     height: 6px;
+                    //     transform: rotate(45deg);
+                    //     margin: 0 20px;
+                    // }
+                    .we {
+                        display: block;
+                        width: 6px;
+                        height: 6px;
+                        transform: rotate(-45.00deg);
+                        background: #ffffff;
+                        border-radius: 1px;
+                    }
+                }
             }
         }
 
