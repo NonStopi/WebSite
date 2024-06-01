@@ -5,8 +5,9 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  outline: 0;
+  outline: none;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 header {
