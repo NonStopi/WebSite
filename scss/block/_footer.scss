@@ -5,5 +5,36 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    
+    flex-flow: column nowrap;
+    padding: 60px 0 32px 0;
+
+    .footer_wreaper {
+        display: flex;
+        max-width: 1296px;
+        margin: 0 12px;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items:stretch;
+
+        .icon{
+            height: 100%;
+            width: (100%/3);
+            display: flex;
+            align-content: center;
+            align-self: start;
+            margin-right: 24px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        .contact {
+            height: 100%;
+            display :flex;
+            align-content: center;
+            flex-flow: column nowrap;
+
+        }
+    }
 }
