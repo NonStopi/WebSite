@@ -162,6 +162,23 @@ header .header_contener .navigation .header_main_menu ul .we {
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
+  position: relative;
+}
+.footer .footer_wreaper .even ul li a:hover {
+  color: #8E8E8E;
+}
+.footer .footer_wreaper .even ul li a:hover::after {
+  width: 100%;
+}
+.footer .footer_wreaper .even ul li a::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ededed;
+  transition: all 0.1s ease;
 }
 .footer .footer_wreaper .contact {
   height: 100%;
@@ -194,7 +211,14 @@ header .header_contener .navigation .header_main_menu ul .we {
   margin-bottom: 24px;
 }
 .footer .watermark {
+  color: #fff;
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
   margin: 35px 0;
+  opacity: 0.5;
 }
 
 main {
