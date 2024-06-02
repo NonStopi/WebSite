@@ -26,18 +26,52 @@
             align-content: center;
             align-self: start;
             margin-right: 24px;
-
+            align-self: stretch;
             img{
                 width: 100%;
+                max-width: 330px;
             }
+        }
+
+        .even {
+            height: 100%;
+            width: 100%;
+            max-width: 440px;
+            align-self: stretch;
+
+            h3 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 140%;
+                color: #fff;
+            }
+             
+            ul {
+
+                li {
+                    list-style: none;
+
+                    a {
+                        color: #fff;
+                        font-family: "Fira Sans", sans-serif;
+                        
+                    }
+
+                }
+
+            }
+
         }
 
         .contact {
             height: 100%;
             display :flex;
+            width: 100%;
+            max-width: 416px;
             align-content: center;
             flex-flow: column nowrap;
-
+            align-self: stretch;
         }
     }
 }
