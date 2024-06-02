@@ -12,15 +12,16 @@
 
     .footer_wreaper {
         display: flex;
+        width: 100%;
         max-width: 1296px;
         margin: 0 12px;
         flex-flow: row nowrap;
-        justify-content: space-around;
-        align-items:stretch;
+        justify-content: space-between;
 
         .icon{
             height: 100%;
-            width: (100%/3);
+            width: 100%;
+            max-width: 440px;
             display: flex;
             align-content: center;
             align-self: start;
