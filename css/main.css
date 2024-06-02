@@ -319,8 +319,8 @@ main section {
   font-weight: 700;
   line-height: 140%;
   letter-spacing: 0%;
-  text-align: left;
-  padding: 3.5px 0 3.5px 34.5px;
+  margin-left: 35px;
+  color: #000;
 }
 
 .poster_block {
