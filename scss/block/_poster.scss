@@ -46,7 +46,7 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: stretch;
-        padding: 32px 60px 32px 60px;
+        padding: 32px 0;
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -67,6 +67,8 @@
 
             .p_string {
                 font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
             }
         }
 
@@ -84,13 +86,19 @@
                 width: 100%;
                 height: 100%;
             }
+        }
+        .description_poster {
 
+            height: 100%;
+            width: 100%;
+            max-width: 464px;
 
-            .description_poster {
+        }
 
-                
-
-            }
+        .button_post {
+            height: 100%;
+            width: 100%;
+            max-width: 306px;
         }
     }
 }
