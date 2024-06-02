@@ -32,8 +32,8 @@ main {
         max-width: 416px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        align-self: flex-start;
+        align-self: stretch;
+        justify-content: space-between;
     
         .event {
             display: flex;
@@ -43,6 +43,8 @@ main {
             padding: 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            height: 100%;
+            max-height: 104px;
     
             img {
                 width: auto;
