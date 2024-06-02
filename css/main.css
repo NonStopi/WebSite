@@ -275,10 +275,10 @@ main section {
   overflow: hidden;
 }
 .container .sidebar .event img {
+  object-fit: cover;
   width: 100%;
   max-width: 80px;
   height: 100%;
-  object-fit: cover;
 }
 .container .sidebar .event p {
   font-family: Fira Sans;
@@ -334,7 +334,7 @@ main section {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: stretch;
   padding: 32px 0;
   background-color: rgba(0, 0, 0, 0.05);
@@ -353,33 +353,38 @@ main section {
 }
 .poster_block .poster_line .data_poster .p_int {
   font-size: 64px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 140%;
 }
 .poster_block .poster_line .data_poster .p_string {
   font-size: 32px;
   font-weight: 700;
   line-height: 140%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .poster_block .poster_line .poster_img {
   width: 100%;
-  max-width: 330px;
-  height: 100%;
+  max-width: 320px;
+  height: 240px;
   overflow: hidden;
 }
 .poster_block .poster_line .poster_img img {
   object-fit: cover;
   border-radius: 12px;
   width: 100%;
+  max-width: 320px;
   height: 100%;
 }
 .poster_block .poster_line .description_poster {
   height: 100%;
   width: 100%;
-  max-width: 464px;
+  max-width: 415px;
 }
 .poster_block .poster_line .button_post {
   height: 100%;
   width: 100%;
-  max-width: 306px;
+  max-width: 175px;
 }
 
 body {
