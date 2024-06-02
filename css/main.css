@@ -204,9 +204,11 @@ main .sidebar .event img {
   border-radius: 5px;
 }
 main .sidebar .event p {
+  font-weight: 600;
+  font-family: Fira Sans;
   padding-left: 24px;
   font-size: 16px;
-  color: #333;
+  color: #191919;
 }
 main .sidebar .event:hover {
   transform: translateY(-5px);
