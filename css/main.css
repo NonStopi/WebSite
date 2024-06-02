@@ -175,8 +175,7 @@ main .container .main-image img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 12px;
   width: 856px;
   height: 497px;
@@ -218,4 +217,4 @@ main .container .sidebar .event:hover {
 
 body {
   background: rgb(237, 237, 237);
-}/*# sourceMappingURL=main.css.map */
+}
