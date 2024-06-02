@@ -44,9 +44,9 @@
         width: 100%;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: stretch;
-        padding: 32px 60px 32px 60px;
+        padding: 32px 0;
         background-color: rgba(0, 0, 0, 0.05);
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -63,18 +63,24 @@
             
             .p_int {
                 font-size: 64px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                line-height: 140%;
             }
 
             .p_string {
                 font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                font-family: Arial, Helvetica, sans-serif;
             }
         }
 
         .poster_img {
 
             width: 100%;
-            max-width: 330px;
-            height: 100%;
+            max-width: 320px;
+            height: 240px;
             overflow: hidden;
 
             img {
@@ -82,15 +88,22 @@
                 object-fit: cover;
                 border-radius: 12px;
                 width: 100%;
+                max-width: 320px;
                 height: 100%;
             }
+        }
+        .description_poster {
 
+            height: 100%;
+            width: 100%;
+            max-width: 415px;
 
-            .description_poster {
+        }
 
-                
-
-            }
+        .button_post {
+            height: 100%;
+            width: 100%;
+            max-width: 175px;
         }
     }
 }
