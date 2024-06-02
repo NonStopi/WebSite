@@ -116,15 +116,16 @@ header .header_contener .navigation .header_main_menu ul .we {
 }
 .footer .footer_wreaper {
   display: flex;
+  width: 100%;
   max-width: 1296px;
   margin: 0 12px;
   flex-flow: row nowrap;
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: space-between;
 }
 .footer .footer_wreaper .icon {
   height: 100%;
-  width: 33.3333333333%;
+  width: 100%;
+  max-width: 440px;
   display: flex;
   align-content: center;
   align-self: start;
@@ -165,10 +166,10 @@ main .container .main-image {
   width: 100%;
   height: 100%;
   max-width: 856px;
-  position: relative;
   overflow: hidden;
   height: 497px;
 }
+<<<<<<< HEAD
 main .container .main-image img {
   position: absolute;
   top: 50%;
@@ -176,9 +177,13 @@ main .container .main-image img {
   transform: translate(-50%, -50%);
   -o-object-fit: cover;
      object-fit: cover;
+=======
+main .main-image img {
+  object-fit: cover;
+>>>>>>> 9d0fb497fa698df296d973582a3e455fea90a3fa
   border-radius: 12px;
-  width: 856px;
-  height: 497px;
+  width: 100%;
+  height: 100%;
 }
 main .container .sidebar {
   width: 100%;
@@ -195,14 +200,22 @@ main .container .sidebar .event {
   border-radius: 10px;
   padding: 12px 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
   height: 100%;
   max-height: 104px;
+  overflow: hidden;
 }
+<<<<<<< HEAD
 main .container .sidebar .event img {
   width: 80px;
   height: 80px;
   border-radius: 5px;
+=======
+main .sidebar .event img {
+  width: 100%;
+  max-width: 80px;
+  height: 100%;
+  object-fit: cover;
+>>>>>>> 9d0fb497fa698df296d973582a3e455fea90a3fa
 }
 main .container .sidebar .event p {
   font-weight: 600;
@@ -213,8 +226,9 @@ main .container .sidebar .event p {
 }
 main .container .sidebar .event:hover {
   transform: translateY(-5px);
+  transition: transform 0.3s;
 }
 
 body {
   background: rgb(237, 237, 237);
-}/*# sourceMappingURL=main.css.map */
+}
