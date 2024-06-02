@@ -302,6 +302,13 @@ main section {
 .poster_block .poster_line .data_poster .p_string {
   font-size: 32px;
 }
+.poster_block .poster_line img {
+  width: 100%;
+  max-width: 320px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 body {
   background: rgb(237, 237, 237);
