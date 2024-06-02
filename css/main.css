@@ -185,6 +185,7 @@ main section {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-bottom: 187px;
 }
 .container .main-image {
   width: 100%;
@@ -225,15 +226,45 @@ main section {
   object-fit: cover;
 }
 .container .sidebar .event p {
-  font-weight: 600;
   font-family: Fira Sans;
   padding-left: 24px;
   font-size: 16px;
   color: #191919;
+  font-weight: 600;
 }
 .container .sidebar .event:hover {
   transform: translateY(-5px);
   transition: transform 0.3s;
+}
+
+.poster {
+  font-family: arial;
+  width: 100%;
+  max-width: 1296px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.poster .h2_poster {
+  font-size: 48px;
+  color: #191919;
+  font-weight: 700;
+  line-height: 140%;
+}
+.poster .all_event {
+  display: flex;
+  align-items: center;
+}
+.poster .all_event img {
+  padding: 2.5px;
+}
+.poster .all_event p {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  letter-spacing: 0%;
+  text-align: left;
+  padding: 3.5px 0 3.5px 34.5px;
 }
 
 body {

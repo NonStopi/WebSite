@@ -1,0 +1,29 @@
+.poster {
+    font-family: arial;
+    width: 100%;
+    max-width: 1296px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    .h2_poster {
+        font-size: 48px;
+        color: #191919;
+        font-weight: 700;
+        line-height: 140%;
+    }
+    .all_event {
+        display: flex;
+        align-items:center;
+        img {
+            padding: 2.5px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0%;
+            text-align: left;
+            padding: 3.5px 0 3.5px 34.5px;
+        }
+    }
+}
