@@ -52,6 +52,7 @@
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         height: 100%;
         max-height: 304px;
+        margin-bottom: 80px;
 
         .data_poster {
             display: flex;
@@ -63,7 +64,7 @@
             
             .p_int {
                 font-size: 64px;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Arial;
                 font-weight: 700;
                 line-height: 140%;
             }
@@ -72,7 +73,7 @@
                 font-size: 32px;
                 font-weight: 700;
                 line-height: 140%;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Arial;
             }
         }
 
@@ -93,17 +94,70 @@
             }
         }
         .description_poster {
-
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
             height: 100%;
             width: 100%;
+            height: 240px;
             max-width: 415px;
+            .name_poster {
+                font-family: Arial;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                height: 60px;
+                hyphens: none;
+                
+            }
+            .description {
+                font-family: Fira Sans;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 140%;
+                hyphens: none;
+                height: 70px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .poster_parametr {
+                display: flex;
+                flex-direction: row;
+                p {
+                    display: flex;
+                    align-items:center;
+                    margin-right: 30px;
+                }
+                img {
+                    margin-right: 20px;
+                }
+            }
 
         }
 
         .button_post {
-            height: 100%;
-            width: 100%;
-            max-width: 175px;
+            display: flex;
+            align-items:center;
+            button {
+                position: static;
+                width: 175px;
+                height: 51px;
+                border-radius: 50px;
+                background: rgb(5, 176, 147);
+                color: rgb(255, 255, 255);
+                font-family: Fira Sans;
+                font-size: 16px;
+                font-weight: 600;
+                line-height: 140%;
+                border:none;
+                margin-right: 30px;
+                &:hover {
+                    background: rgb(4, 130, 109);
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    transform: translateY(-2px);
+                    transition: transform 0.3s;
+                }
+            }
         }
     }
 }
