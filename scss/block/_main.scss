@@ -1,1 +1,13 @@
-@import "./slider.scss"
+main {
+    display: flex;
+    width: 100%;
+    align-items:center;
+    justify-content: center;
+    flex-flow: column nowrap;
+
+    section {
+        width: 100%;
+        max-width: 1296px;
+        margin: 0 24px;
+    }
+}
