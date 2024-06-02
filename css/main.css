@@ -446,6 +446,12 @@ main section {
   transition: transform 0.3s;
 }
 
+.h1_contact {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 140%;
+}
+
 body {
   background: rgb(237, 237, 237);
 }/*# sourceMappingURL=main.css.map */

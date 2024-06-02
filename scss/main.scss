@@ -12,8 +12,9 @@
 @import "./block/_header.scss";
 @import "./block/_footer.scss";
 @import "./block/_main.scss";
-@import "./block/slider.scss";
-@import "./block/poster.scss";
+@import "./block/_slider.scss";
+@import "./block/_poster.scss";
+@import "./block/_contact.scss";
 
 body {
     background: rgb(237, 237, 237);
