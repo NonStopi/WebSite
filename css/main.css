@@ -162,10 +162,22 @@ main .container {
 }
 main .main-image {
   width: 100%;
+  height: 100%;
   max-width: 856px;
+  position: relative;
+  overflow: hidden;
+  height: 497px;
 }
 main .main-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 12px;
+  width: 856px;
+  height: 497px;
 }
 main .sidebar {
   width: 100%;
@@ -180,20 +192,19 @@ main .sidebar .event {
   align-items: center;
   background-color: #ffffff;
   border-radius: 10px;
-  padding: 0;
+  padding: 12px 16px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
   height: 100%;
   max-height: 104px;
-  margin: 12px 16px;
 }
 main .sidebar .event img {
-  width: auto;
-  height: auto;
+  width: 80px;
+  height: 80px;
   border-radius: 5px;
 }
 main .sidebar .event p {
-  margin: 0;
+  padding-left: 24px;
   font-size: 16px;
   color: #333;
 }
