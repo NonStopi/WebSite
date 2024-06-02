@@ -448,6 +448,33 @@ main section {
 
 .h1_contact {
   font-size: 48px;
+  width: 100%;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 100px;
+}
+
+.contact_main {
+  position: absolute;
+  display: flex;
+}
+
+.contact_block {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  max-width: 966px;
+}
+.contact_block .contact_1 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact_block .contact_1 .adress_1 {
+  font-size: 24px;
   font-weight: 700;
   line-height: 140%;
 }
