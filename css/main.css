@@ -185,6 +185,7 @@ main .sidebar .event {
   transition: transform 0.3s;
   height: 100%;
   max-height: 104px;
+  margin: 12px 16px;
 }
 main .sidebar .event img {
   width: auto;
@@ -202,4 +203,4 @@ main .sidebar .event:hover {
 
 body {
   background: rgb(237, 237, 237);
-}
+}/*# sourceMappingURL=main.css.map */
