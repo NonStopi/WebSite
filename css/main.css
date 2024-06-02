@@ -111,7 +111,6 @@ header .header_contener .navigation .header_main_menu ul .we {
   height: 386px;
   flex-flow: column nowrap;
   padding: 60px 0 32px 0;
-  position: fixed;
   bottom: 0;
   margin-top: 150px;
 }
@@ -141,27 +140,40 @@ header .header_contener .navigation .header_main_menu ul .we {
   flex-flow: column nowrap;
 }
 
-main .container {
-  width: 52%;
-  margin: 0 auto;
-  margin-right: 25%;
+main {
   display: flex;
-  align-items: flex-start;
+  width: 100%;
+  align-items: center;
   justify-content: center;
-  padding: 20px;
+}
+main section {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 24px;
+}
+main .container {
+  width: 100%;
+  max-width: 1296px;
+  margin: 0 24px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 main .main-image {
-  flex: 2;
-  margin-right: 20px;
+  width: 100%;
+  max-width: 856px;
 }
 main .main-image img {
-  border-radius: 10px;
+  border-radius: 12px;
 }
 main .sidebar {
-  flex: 1;
+  width: 100%;
+  max-width: 416px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-self: flex-start;
 }
 main .sidebar .event {
   display: flex;
@@ -188,4 +200,4 @@ main .sidebar .event:hover {
 
 body {
   background: rgb(237, 237, 237);
-}/*# sourceMappingURL=main.css.map */
+}
