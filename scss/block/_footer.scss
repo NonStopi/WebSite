@@ -23,10 +23,10 @@
             width: 100%;
             max-width: 440px;
             display: flex;
-            align-content: center;
-            align-self: start;
+            align-content: flex-start;
             margin-right: 24px;
-            align-self: stretch;
+            align-self: flex-start;
+
             img{
                 width: 100%;
                 max-width: 330px;

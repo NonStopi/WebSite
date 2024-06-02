@@ -127,10 +127,9 @@ header .header_contener .navigation .header_main_menu ul .we {
   width: 100%;
   max-width: 440px;
   display: flex;
-  align-content: center;
-  align-self: start;
+  align-content: flex-start;
   margin-right: 24px;
-  align-self: stretch;
+  align-self: flex-start;
 }
 .footer .footer_wreaper .icon img {
   width: 100%;
