@@ -537,13 +537,14 @@ main section {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  background-color: #fff;
+  background-color: #e1e1e1;
   border-radius: 12px;
   align-items: center;
   gap: 10px;
+  overflow: hidden;
 }
 .news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   transition: box-shadow 0.5s ease;
 }
 .news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container img {
@@ -551,6 +552,12 @@ main section {
   width: 306px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
+  background: #000;
+}
+.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover img {
+  height: 194px;
+  filter: brightness(50%);
+  transition: height, filter 0.5s ease;
 }
 .news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container h3 {
   display: block;
@@ -564,6 +571,11 @@ main section {
   width: 80%;
   color: #191919;
 }
+.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover h3 {
+  font-size: 26px;
+  width: 85%;
+  transition: font-size, width 0.3s ease;
+}
 .news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container p {
   display: block;
   height: 100%;
@@ -575,10 +587,6 @@ main section {
   line-height: 140%;
   width: 80%;
   color: #191919;
-}
-
-.splide__pagination {
-  bottom: -20px;
 }
 
 .h1_program {
