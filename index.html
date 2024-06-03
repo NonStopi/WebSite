@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <title>Сайт концертно-экскурсионных программ</title>
 </head>
@@ -131,38 +132,48 @@
             <div class="news_wreaper">
                 <div class="news">
                     <h2>Новости</h2>
-                        <div class="swiper_news">
-                            <div class="swiper-wrapper">
-                                <a href="">
-                                    <div class="swiper-slide slide_news">
-                                        <img src="" alt="">
-                                        <p></p>
-                                        <p></p>
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="swiper-slide slide_news">
-                                        <img src="" alt="">
-                                        <p></p>
-                                        <p></p>
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="swiper-slide slide_news">
-                                        <img src="" alt="">
-                                        <p></p>
-                                        <p></p>
-                                    </div>
-                                </a>
-                                <a href="">
-                                    <div class="swiper-slide slide_news">
-                                        <img src="" alt="">
-                                        <p></p>
-                                        <p></p>
-                                    </div>
-                                </a>
+                        <div id="splideNews" class="splide" role="group">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide">
+                                        <a href="">
+                                            <div class="splide__slide__container">
+                                                <img src="img/main_afisha.png" alt="">
+                                                <h3></h3>
+                                                <p></p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="">
+                                            <div class="splide__slide__container">
+                                                <img src="img/poster__image1.png" alt="">
+                                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="">
+                                            <div class="splide__slide__container">
+                                                <img src="img/thumb-slider__image.png" alt="">
+                                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="splide__slide">
+                                        <a href="">
+                                            <div class="splide__slide__container">
+                                                <img src="img/thumb-slider__image2.png" alt="">
+                                                <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                        </div>
+                        </div> 
                     <div class="calender"></div>
                 </div>
             </div>
@@ -190,7 +201,7 @@
         </div>
         <div class="watermark">Сайт концертно-экскурсионных программ</div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 </html>
