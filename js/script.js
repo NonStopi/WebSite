@@ -1,9 +1,8 @@
 const swiperNew = new Swiper('.swiper_news', {
-    slidesPerView: 2,
-    spaceBetween: 30,
-    autoplay: {
-        delay: 5000,
-    },
+    slidesPerView: 1,
+    speed: 400,
+    spaceBetween: 10,
+    
     pagination: {
         el: '.swiper-pagination_news',
         clickable: true,
