@@ -549,6 +549,91 @@ main section {
   border-radius: 12px;
 }
 
+.h1_program {
+  font-size: 48px;
+  width: 100%;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 100px;
+}
+
+.program_block {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  width: 100%;
+}
+.program_block .program_colum {
+  width: 49%;
+}
+.program_block .program_colum h2 {
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 24px;
+}
+.program_block .program_colum p {
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 40px;
+  -webkit-hyphens: none;
+          hyphens: none;
+}
+.program_block .program_colum .p_structure {
+  line-height: 2;
+}
+.program_block .program_colum .img_poster {
+  border-radius: 12px;
+  width: 526px;
+  height: 742px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.program_block .program_colum .button_post {
+  display: flex;
+  align-items: center;
+}
+.program_block .program_colum .button_post button {
+  position: static;
+  width: 175px;
+  height: 51px;
+  border-radius: 50px;
+  background: rgb(5, 176, 147);
+  color: rgb(255, 255, 255);
+  font-family: Fira Sans;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  border: none;
+  margin-right: 30px;
+}
+.program_block .program_colum .button_post button:hover {
+  background: rgb(4, 130, 109);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: transform 0.3s;
+}
+.program_block .program_colum .program_photo {
+  margin-top: 40px;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 24px;
+}
+.program_block .program_colum .program_photo img {
+  width: 306px;
+  height: 210px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.program_block .program_general {
+  width: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
 body {
   background: rgb(237, 237, 237);
 }/*# sourceMappingURL=main.css.map */
