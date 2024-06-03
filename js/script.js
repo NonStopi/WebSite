@@ -1,8 +1,13 @@
 const spiderNews = new Splide('#splideNews',{
     type: 'loop',
-    height: 2,
+    perPage: 2,
+    perMove: 1,
     height: '400px',
+    width: '636px',
     gap: '24px',
+    autoplay: true,
+    arrows: boolean = false,
+    //padding: {left:'10px', rigth:'10px'},
 });
 
 spiderNews.mount();
