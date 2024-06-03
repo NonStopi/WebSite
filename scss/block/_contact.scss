@@ -12,11 +12,23 @@
     flex-direction: row;
     width: 100%;
 
-    .contact_1 {
-        .adress_1 {
+    .contact_colum {
+        h2 {
+            font-family: Arial;
             font-size: 24px;
             font-weight: 700;
             line-height: 140%;
+            margin-bottom: 24px;
+        }
+        p {
+            font-family: Fira Sans;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%;
+            margin-bottom: 40px;
+        }
+        .contact_grafic {
+            margin-bottom: 15px;
         }
     }
 
@@ -25,4 +37,12 @@
         display: flex;
         flex-flow: column nowrap;
     }
+}
+.map {
+    width: 856px;
+    height: 441px;
+    margin: 0 auto;
+}
+[class*="copyrights-pane"] {
+    display: none !important;
 }
