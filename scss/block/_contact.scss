@@ -23,6 +23,6 @@
     .contact_general {
         width: 30%;
         display: flex;
-        
+        flex-flow: column nowrap;
     }
 }
