@@ -449,29 +449,20 @@ main section {
   margin-bottom: 100px;
 }
 
-.contact_main {
-  position: absolute;
-  display: flex;
-}
-
 .contact_block {
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-around;
   flex-direction: row;
   width: 100%;
-  max-width: 966px;
-}
-.contact_block .contact_1 {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
 }
 .contact_block .contact_1 .adress_1 {
   font-size: 24px;
   font-weight: 700;
   line-height: 140%;
+}
+.contact_block .contact_general {
+  width: 30%;
+  display: flex;
 }
 
 .news {
