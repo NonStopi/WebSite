@@ -454,13 +454,7 @@ main section {
   margin-bottom: 100px;
 }
 
-.contact_main {
-  position: absolute;
-  display: flex;
-}
-
 .contact_block {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
