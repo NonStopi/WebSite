@@ -1,3 +1,3 @@
-const MySliderNews = new Splide('#mySliderNews')
-
-MySliderNews.mount()
+const swiperNew = new Swiper('.swiper_news', {
+    
+})
