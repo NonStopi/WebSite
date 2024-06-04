@@ -577,7 +577,7 @@ main section {
 .news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover h3 {
   font-size: 26px;
   width: 85%;
-  transition: font-size, width 0.3s ease;
+  transition: font-size 0.3s ease;
 }
 .news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container p {
   display: block;
@@ -706,7 +706,9 @@ main section {
   font-weight: 700;
   line-height: 140%;
   color: #fff;
-  margin: 0 0 10px 30px;
+  padding: 0 0 10px 30px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .calendar-container {
