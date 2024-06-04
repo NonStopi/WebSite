@@ -36,7 +36,7 @@
     display: flex;
     align-items:center;
     flex-direction: row;
-    gap: 24px;
+    justify-content: space-between;
     .short_anonc_item {
         display: flex;
         flex-direction: row;
