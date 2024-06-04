@@ -1,0 +1,78 @@
+.short_anonc_header {
+    font-family: arial;
+    width: 100%;
+    max-width: 1296px;
+    display: flex;
+    align-items:center;
+    margin-bottom: 100px;
+    justify-content: space-between;
+
+    .h2_anonc {
+        font-size: 48px;
+        color: #191919;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    .all_event {
+        display: flex;
+        align-items:center;
+
+        img {
+            padding: 2.5px;
+        }
+
+        p {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0%;
+            margin-left: 35px;
+            color: #000;
+        }
+    }
+}
+.short_anonc_main {
+    display: flex;
+    align-items:center;
+    flex-direction: row;
+    gap: 24px;
+    .short_anonc_item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 27px;
+        div {
+            display: flex;
+            align-items:center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100px;
+            height: 100px;
+            background: rgb(5, 176, 147);
+            border-radius: 12px;
+            .data_anonc {
+                text-align: center;
+                font-size: 32px;
+                font-weight: 700;
+                line-height: 140%;
+                color: #fff;
+            }
+            .mount_anonc {
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 140%;
+                color: #fff;
+            }
+        }
+        .name_anonc {
+            font-family: Fira Sans;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 140%;
+            padding-right: 12px;
+        }
+    }
+    
+}
