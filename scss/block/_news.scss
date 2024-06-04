@@ -1,37 +1,40 @@
 .news_wreaper {
     width: 100%;
-    height: 100%;
     display: flex;
     flex-flow: row nowrap;
+    justify-content: space-around;
 
     .news {
         width: 100%;
-        max-width: 636px;
         height: 100%;
+        max-width: 656px;
 
         h2 {
             margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 140%;
+            color: #191919;
         }
 
         .splide{
             width: 100%;
             height: 100%;
-            max-height: 400px;
+            height: 440px;
+            left: -10px;
 
             .splide__track {
                 width: 100%;
                 height: 100%;
-                max-height: 400px;
 
                 .splide__list {
                     width: 100%;
                     height: 100%;
-                    max-height: 400px;
 
                     .splide__slide {
                         width: 100%;
                         height: 100%;
-                        max-height: 400px;
                         max-width: 306px;
 
                         a {
@@ -42,14 +45,63 @@
                                 width: 100%;
                                 max-width: 306px;
                                 height: 100%;
-                                max-height: 420px;
+                                display: flex;
+                                flex-flow: column nowrap;
+                                justify-content: flex-start;
+                                background-color: #e1e1e1;
+                                border-radius: 12px;
+                                align-items: center;
+                                gap: 10px;
                                 overflow: hidden;
+                                &:hover {
+                                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
+                                    transition: box-shadow 0.5s ease;
+                                }
 
                                 img {
                                     height: 204px;
                                     width: 306px;
                                     object-fit: cover;
-                                    border-radius: 12px;
+                                    border-radius: 12px 12px 0 0;
+                                    background: #000;
+                                }
+
+                                &:hover img {
+                                    height: 194px;
+                                    filter: brightness(50%);
+                                    transition: height, filter 0.5s ease;
+                                }
+
+                                h3 {
+                                    display: block;
+                                    height: 100%;
+                                    max-height: 67px;
+                                    font-family: Arial, Helvetica, sans-serif;
+                                    font-size: 24px;
+                                    font-weight: 700;
+                                    line-height: 140%;
+                                    overflow: hidden;
+                                    width: 80%;
+                                    color: #191919;
+                                }
+
+                                &:hover h3 {
+                                    font-size: 26px;
+                                    width: 85%;
+                                    transition: font-size, width 0.3s ease;
+                                }
+
+                                p {
+                                    display: block;
+                                    height: 100%;
+                                    max-height: 70px;
+                                    overflow: hidden;
+                                    font-family: "Fira Sans";
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    line-height: 140%;
+                                    width: 80%;
+                                    color: #191919;
                                 }
                             }
                         }
