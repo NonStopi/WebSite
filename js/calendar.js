@@ -1,69 +1,94 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const calendarElement = document.getElementById('calendar');
-    const displayDate = document.getElementById('selectedDate');
-    const monthYearDisplay = document.getElementById('monthYear');
-    const prevMonthBtn = document.getElementById('prevMonth');
-    const nextMonthBtn = document.getElementById('nextMonth');
-    const now = new Date();
-    const monthNames = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
-    let selectedDate = null;
-    let currentMonth = now.getMonth();
-    let currentYear = now.getFullYear();
-    let selectedDateValue = null;
+const calendar = document.getElementById('calendar');
+const monthElement = document.getElementById('month');
+const yearElement = document.getElementById('year');
+const prevMonthButton = document.getElementById('prevMonth');
+const nextMonthButton = document.getElementById('nextMonth');
+let date = new Date();
+let selectedDate;
 
-    function createCalendar(year, month) {
-        const firstDay = new Date(year, month, 1).getDay();
-        const lastDate = new Date(year, month + 1, 0).getDate();
+const daysOfWeek = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const months = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'];
 
-        let table = '<table><thead><tr>';
-        table += '<tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr></thead><tbody><tr>';
+prevMonthButton.onclick = function() {
+    date.setMonth(date.getMonth() - 1);
+    monthElement.classList.add('hidden');
+    yearElement.classList.add('hidden');
+    calendar.classList.add('hidden');
+    setTimeout(function() {
+        createCalendar();
+        monthElement.classList.remove('hidden');
+        yearElement.classList.remove('hidden');
+        calendar.classList.remove('hidden');
+    }, 500);
+};
 
-        let dayOfWeek = firstDay === 0 ? 6 : firstDay - 1;
-        for (let i = 0; i < dayOfWeek; i++) {
-            table += '<td></td>';
+nextMonthButton.onclick = function() {
+    date.setMonth(date.getMonth() + 1);
+    monthElement.classList.add('hidden');
+    yearElement.classList.add('hidden');
+    calendar.classList.add('hidden');
+    setTimeout(function() {
+        createCalendar();
+        monthElement.classList.remove('hidden');
+        yearElement.classList.remove('hidden');
+        calendar.classList.remove('hidden');
+    }, 500);
+};
+
+function createCalendar() {
+    calendar.innerHTML = '';
+    const month = date.getMonth();
+    const year = date.getFullYear();
+    const daysInMonth = new Date(year, month + 1, 0).getDate();
+    const daysInPrevMonth = new Date(year, month, 0).getDate();
+    let firstDay = new Date(year, month, 1).getDay();
+    firstDay = (firstDay === 0) ? 7 : firstDay; // Переводим воскресенье на 7-й день
+
+    monthElement.textContent = `${months[month]}`;
+    yearElement.textContent = `${year}`;
+
+    let row = document.createElement('tr');
+    for (let i = 0; i < 7; i++) {
+        const cell = document.createElement('td');
+        cell.textContent = daysOfWeek[i];
+        cell.classList.add('days_of_week');
+        if (i >= 5) {
+            cell.classList.add('weekend');
         }
+        row.appendChild(cell);
+    }
+    calendar.appendChild(row);
 
-        for (let date = 1; date <= lastDate; date++) {
-            const day = (dayOfWeek + date - 1) % 7;
-            const dateValue = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
-            table += `<td data-date="${dateValue}">${date}</td>`;
-            if (day === 6 && date < lastDate) {
-                table += '</tr><tr>';
+    row = document.createElement('tr');
+    calendar.appendChild(row);
+
+    for (let i = 1; i < firstDay; i++) {
+        const cell = document.createElement('td');
+        cell.textContent = daysInPrevMonth - firstDay + i + 1;
+        cell.classList.add('prevMonth'); // Добавляем класс 'prevMonth' для чисел прошлого месяца
+        row.appendChild(cell);
+    }
+
+    for (let i = 1; i <= daysInMonth; i++) {
+        if ((i + firstDay - 2) % 7 === 0) {
+            row = document.createElement('tr');
+            calendar.appendChild(row);
+        }
+        const cell = document.createElement('td');
+        cell.textContent = i;
+        if ((i + firstDay - 2) % 7 >= 5) {
+            cell.classList.add('weekend');
+        }
+        cell.onclick = function() {
+            if (selectedDate) {
+                selectedDate.classList.remove('selected');
             }
-        }
-
-        table += '</tr></tbody></table>';
-        calendarElement.innerHTML = table;
-
-        document.querySelectorAll('td[data-date]').forEach(td => {
-            td.addEventListener('click', () => {
-                if (selectedDate) {
-                    selectedDate.classList.remove('selected');
-                }
-                selectedDate = td;
-                selectedDate.classList.add('selected');
-                selectedDateValue = td.dataset.date;
-                displayDate.textContent = `Выбранная дата: ${selectedDateValue}`;
-            });
-        });
-
-        monthYearDisplay.textContent = `${monthNames[month]} ${year}`;
+            cell.classList.add('selected');
+            selectedDate = cell;
+            console.log(`Выбранная дата: ${year}-${month + 1}-${cell.textContent}`);
+        };
+        row.appendChild(cell);
     }
+}
 
-    function changeMonth(offset) {
-        currentMonth += offset;
-        if (currentMonth < 0) {
-            currentMonth = 11;
-            currentYear--;
-        } else if (currentMonth > 11) {
-            currentMonth = 0;
-            currentYear++;
-        }
-        createCalendar(currentYear, currentMonth);
-    }
-
-    prevMonthBtn.addEventListener('click', () => changeMonth(-1));
-    nextMonthBtn.addEventListener('click', () => changeMonth(1));
-
-    createCalendar(currentYear, currentMonth);
-});
+createCalendar();
