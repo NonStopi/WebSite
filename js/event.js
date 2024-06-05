@@ -1,11 +1,13 @@
 var splide = new Splide('#main-carousel',{
-    type: 'loop',
+    type: 'fade',
+    rewind: true,
     width: 856,
     height: 464,
     pagination: false,
     cover: true,
     arrows: boolean = false,
-    gap: 20,
+    autoplay: true,
+    interval: 10000,
 });
 
 var thumbnails = document.getElementsByClassName('thumbnail');

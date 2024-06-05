@@ -288,6 +288,17 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
   margin: 0 16px;
   border-radius: 8px;
 }
+.event_contener .thumbnails .thumbnail p {
+  height: auto;
+  max-height: 72px;
+  width: 100%;
+  max-width: 304px;
+  font-family: "Fira Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 140%;
+  overflow: hidden;
+}
 
 .header_poster {
   font-family: arial;
@@ -580,7 +591,7 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
   height: 100%;
   max-height: 70px;
   overflow: hidden;
-  font-family: "Fira Sans" sans-serif;
+  font-family: "Fira Sans";
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
