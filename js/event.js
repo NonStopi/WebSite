@@ -4,6 +4,8 @@ var splide = new Splide('#main-carousel',{
     height: 464,
     pagination: false,
     cover: true,
+    arrows: boolean = false,
+    gap: 20,
 });
 
 var thumbnails = document.getElementsByClassName('thumbnail');

@@ -245,15 +245,16 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
   justify-content: space-between;
   margin-bottom: 187px;
 }
-.event_contener .splide_event .splite__track .splide__list .splide__slide {
-  border-radius: 12px;
+.event_contener .splide_event .splide__track .splide__list .splide__slide {
+  display: flex;
 }
-.event_contener .splide_event .splite__track .splide__list .splide__slide a {
+.event_contener .splide_event .splide__track .splide__list .splide__slide a {
   width: 856px;
   height: 464px;
   overflow: hidden;
+  border-radius: 12px;
 }
-.event_contener .splide_event .splite__track .splide__list .splide__slide a img {
+.event_contener .splide_event .splide__track .splide__list .splide__slide a img {
   width: 856px;
   height: 464px;
   object-fit: cover;
@@ -273,9 +274,9 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
   overflow: hidden;
   align-items: center;
   justify-content: flex-start;
-  background-color: rgba(25, 25, 25, 0.05);
+  background-color: rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  opacity: 0.3;
+  opacity: 0.6;
 }
 .event_contener .thumbnails .thumbnail.is-active {
   opacity: 1;
