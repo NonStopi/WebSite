@@ -3,6 +3,7 @@ var splide = new Splide('#main-carousel',{
     width: 856,
     height: 464,
     pagination: false,
+    cover: true,
 });
 
 var thumbnails = document.getElementsByClassName('thumbnail');
@@ -17,17 +18,17 @@ function initThumbnail( thumbnail, index ) {
     } );
 }
 
-// splideEvent.on( 'mounted move', function () {
-//     var thumbnail = thumbnails[ splide.index ];
+splide.on( 'move', function () {
+    var thumbnail = thumbnails[ splide.index ];
   
-//     if ( thumbnail ) {
-//       if ( current ) {
-//         current.classList.remove( 'is-active' );
-//       }
+    if ( thumbnail ) {
+      if ( current ) {
+        current.classList.remove( 'is-active' );
+      }
   
-//       thumbnail.classList.add( 'is-active' );
-//       current = thumbnail;
-//     }
-//   } );
+      thumbnail.classList.add( 'is-active' );
+      current = thumbnail;
+    }
+  } );
 
 splide.mount();
