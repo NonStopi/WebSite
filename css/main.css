@@ -229,7 +229,7 @@ main {
   justify-content: center;
   flex-flow: column nowrap;
 }
-main section {
+main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
   width: 100%;
   max-width: 1296px;
   margin: 0 24px;
@@ -247,12 +247,35 @@ main section {
 }
 .event_contener .thumbnails {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   flex-flow: column nowrap;
 }
 .event_contener .thumbnails .thumbnail {
+  cursor: pointer;
   max-width: 100%;
   width: 416px;
+  height: 104px;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(25, 25, 25, 0.05);
+  border-radius: 8px;
+}
+.event_contener .thumbnails .thumbnail a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.event_contener .thumbnails .thumbnail a img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  margin: 0 16px;
+  border-radius: 8px;
 }
 
 .header_poster {
@@ -472,30 +495,30 @@ main section {
   line-height: 140%;
   color: #191919;
 }
-.news_wreaper .news .splide {
+.news_wreaper .news .splite_news {
   width: 100%;
   height: 100%;
   height: 440px;
   left: -10px;
 }
-.news_wreaper .news .splide .splide__track {
+.news_wreaper .news .splite_news .splide__track {
   width: 100%;
   height: 100%;
 }
-.news_wreaper .news .splide .splide__track .splide__list {
+.news_wreaper .news .splite_news .splide__track .splide__list {
   width: 100%;
   height: 100%;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide {
   width: 100%;
   height: 100%;
   max-width: 306px;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a {
   width: 100%;
   height: 100%;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container {
   width: 100%;
   max-width: 306px;
   height: 100%;
@@ -508,23 +531,23 @@ main section {
   gap: 10px;
   overflow: hidden;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
   transition: box-shadow 0.5s ease;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container img {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container img {
   height: 204px;
   width: 306px;
   object-fit: cover;
   border-radius: 12px 12px 0 0;
   background: #000;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover img {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container:hover img {
   height: 194px;
   filter: brightness(50%);
   transition: height, filter 0.5s ease;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container h3 {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container h3 {
   display: block;
   height: 100%;
   max-height: 67px;
@@ -536,12 +559,12 @@ main section {
   width: 80%;
   color: #191919;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container:hover h3 {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container:hover h3 {
   font-size: 26px;
   width: 85%;
   transition: font-size 0.3s ease;
 }
-.news_wreaper .news .splide .splide__track .splide__list .splide__slide a .splide__slide__container p {
+.news_wreaper .news .splite_news .splide__track .splide__list .splide__slide a .splide__slide__container p {
   display: block;
   height: 100%;
   max-height: 70px;
