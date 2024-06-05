@@ -7,6 +7,7 @@ var splide = new Splide('#main-carousel',{
 });
 
 var thumbnails = document.getElementsByClassName('thumbnail');
+var current;
 
 for ( var i = 0; i < thumbnails.length; i++ ) {
     initThumbnail(thumbnails[ i ], i );
@@ -18,17 +19,17 @@ function initThumbnail( thumbnail, index ) {
     } );
 }
 
-splide.on( 'move', function () {
-    var thumbnail = thumbnails[ splide.index ];
-  
-    if ( thumbnail ) {
-      if ( current ) {
-        current.classList.remove( 'is-active' );
-      }
-  
-      thumbnail.classList.add( 'is-active' );
-      current = thumbnail;
+splide.on("mounted move", function () {
+  var thumbnail = thumbnails[splide.index];
+
+  if (thumbnail) {
+    if (current) {
+      current.classList.remove("is-active");
     }
-  } );
+
+    thumbnail.classList.add("is-active");
+    current = thumbnail;
+  }
+});
 
 splide.mount();
