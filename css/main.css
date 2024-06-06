@@ -385,10 +385,12 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
   height: 100%;
   display: flex;
   align-items: center;
+  align-self: center;
 }
 @media screen and (max-width: 1320px) {
   main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
-    max-width: 1320px;
+    width: 100%;
+    max-width: 904px;
   }
 }
 main #poster, main #anons, main #contact, main #program {
@@ -409,8 +411,8 @@ main #poster, main #anons, main #contact, main #program {
   .event_contener {
     flex-flow: column nowrap;
     justify-content: flex-start;
-    gap: 40px;
-    margin-bottom: 50px;
+    gap: 24px;
+    margin-bottom: 60px;
   }
 }
 .event_contener .splide_event .splide__track .splide__list .splide__slide {
@@ -498,11 +500,16 @@ main #poster, main #anons, main #contact, main #program {
 
 .header_poster {
   font-family: arial;
-  max-width: 1296px;
+  width: 100%;
   display: flex;
   align-items: center;
   margin-bottom: 100px;
   justify-content: space-between;
+}
+@media screen and (max-width: 1320px) {
+  .header_poster {
+    margin-bottom: 20px;
+  }
 }
 .header_poster .h2_poster {
   font-size: 48px;
@@ -530,14 +537,19 @@ main #poster, main #anons, main #contact, main #program {
 
 .poster_block {
   font-family: Arial, Helvetica, sans-serif;
-  width: 1296px;
+  width: 100%;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
+  gap: 80px;
+  margin-bottom: 155px;
 }
 @media screen and (max-width: 1320px) {
   .poster_block {
-    width: 1320px;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 24px;
   }
 }
 .poster_block .poster_line {
@@ -545,14 +557,20 @@ main #poster, main #anons, main #contact, main #program {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   padding: 32px 0;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   height: 100%;
-  max-height: 304px;
-  margin-bottom: 80px;
+}
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line {
+    width: 416px;
+    padding: 12px;
+    gap: 12px;
+    flex-flow: column nowrap;
+  }
 }
 .poster_block .poster_line .data_poster {
   display: flex;
@@ -574,11 +592,29 @@ main #poster, main #anons, main #contact, main #program {
   line-height: 140%;
   font-family: Arial;
 }
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line .data_poster {
+    flex-flow: row nowrap;
+  }
+  .poster_block .poster_line .data_poster .p_int, .poster_block .poster_line .data_poster .p_string {
+    font-size: 32px;
+  }
+  .poster_block .poster_line .data_poster .p_int::after, .poster_block .poster_line .data_poster .p_string::after {
+    content: "-";
+    opacity: 0;
+  }
+}
 .poster_block .poster_line .poster_img {
   width: 100%;
   max-width: 320px;
   height: 240px;
   overflow: hidden;
+}
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line .poster_img {
+    max-width: 416px;
+    height: 260px;
+  }
 }
 .poster_block .poster_line .poster_img img {
   object-fit: cover;
@@ -586,6 +622,11 @@ main #poster, main #anons, main #contact, main #program {
   width: 100%;
   max-width: 320px;
   height: 100%;
+}
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line .poster_img img {
+    max-width: 416px;
+  }
 }
 .poster_block .poster_line .description_poster {
   display: flex;
