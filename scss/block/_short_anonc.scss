@@ -37,11 +37,22 @@
     align-items:center;
     flex-direction: row;
     justify-content: space-between;
+    @media screen and (max-width: 1320px) {
+        align-self: flex-start;
+    }
+
+    @media screen and (max-width: 1320px) {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
     .short_anonc_item {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 27px;
+
         div {
             display: flex;
             align-items:center;
@@ -51,6 +62,7 @@
             height: 100px;
             background: rgb(5, 176, 147);
             border-radius: 12px;
+
             .data_anonc {
                 text-align: center;
                 font-size: 32px;
@@ -58,6 +70,7 @@
                 line-height: 140%;
                 color: #fff;
             }
+
             .mount_anonc {
                 text-align: center;
                 font-size: 18px;
@@ -66,6 +79,7 @@
                 color: #fff;
             }
         }
+
         .name_anonc {
             font-family: Fira Sans;
             font-size: 14px;

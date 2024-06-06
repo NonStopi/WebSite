@@ -4,10 +4,21 @@
     flex-flow: row nowrap;
     justify-content: space-between;
 
+    @media screen and (max-width: 1320px) {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        gap: 20px;
+        margin-bottom: 60px;
+    }
+
     .news {
         width: 100%;
         height: 100%;
         max-width: 656px;
+
+        @media screen and (max-width: 1320px) {
+            max-width: 856px;
+        }
 
         h2 {
             margin-bottom: 20px;
@@ -19,9 +30,6 @@
         }
 
         .splite_news{
-            width: 100%;
-            height: 100%;
-            height: 440px;
             left: -10px;
 
             .splide__track {
@@ -35,7 +43,7 @@
                     .splide__slide {
                         width: 100%;
                         height: 100%;
-                        max-width: 306px;
+                        //max-width: 306px;
 
                         a {
                             width: 100%;
@@ -43,7 +51,6 @@
                             
                             .splide__slide__container {
                                 width: 100%;
-                                max-width: 306px;
                                 height: 100%;
                                 display: flex;
                                 flex-flow: column nowrap;
@@ -53,14 +60,10 @@
                                 align-items: center;
                                 gap: 10px;
                                 overflow: hidden;
-                                &:hover {
-                                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.22);
-                                    transition: box-shadow 0.5s ease;
-                                }
 
                                 img {
                                     height: 204px;
-                                    width: 306px;
+                                    width: 100%;
                                     object-fit: cover;
                                     border-radius: 12px 12px 0 0;
                                     background: #000;
@@ -88,7 +91,7 @@
                                 &:hover h3 {
                                     font-size: 26px;
                                     width: 85%;
-                                    transition: font-size 0.3s ease;
+                                    transition: width 0.3s ease;
                                 }
 
                                 p {
@@ -110,5 +113,4 @@
             }
         }
     }
-
 }

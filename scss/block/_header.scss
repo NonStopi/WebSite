@@ -9,7 +9,7 @@ header {
     justify-content: center;
     margin: 0 0 64px 0;
 
-    @media (max-width: 1319px) {
+    @media screen and (max-width: 1320px) {
         justify-content: space-between;
         margin: 0;
         position: fixed;
@@ -26,7 +26,7 @@ header {
         align-items: center;
         padding: 0 12px;
 
-        @media (max-width: 1319px) {
+        @media screen and (max-width: 1320px) {
 
             justify-content: space-between;
 
@@ -89,7 +89,7 @@ header {
 
             .header_main_menu{
 
-                @media screen and (max-width: 1319px) {
+                @media screen and (max-width: 1320px) {
                     display: none;
                 }
 
@@ -98,7 +98,7 @@ header {
                     flex-direction: row nowrap;
                     height: 100%;
 
-                    @media screen and (max-width: 1319px) {
+                    @media screen and (max-width: 1320px) {
                         flex-flow: column nowrap;
                         gap: 20px;
                     }
@@ -107,7 +107,7 @@ header {
                         height: 100%;
                         display: flex;
                         list-style: none;
-                        @media screen and (max-width: 1319px) {
+                        @media screen and (max-width: 1320px) {
                             height: 20px;
                         }
                         &:not(:first-child)::before{
@@ -130,7 +130,7 @@ header {
                             font-size: 600;
                             font-style: normal;
 
-                            @media screen and (max-width: 1319px) {
+                            @media screen and (max-width: 1320px) {
                                 &::after {
                                     content: none;
                                 }
@@ -156,7 +156,7 @@ header {
 
                         }
 
-                        @media screen and (max-width: 1319px) {
+                        @media screen and (max-width: 1320px) {
                             &::before{
                             align-self: center;
                             content: "";
@@ -183,7 +183,7 @@ header {
         }
     }
 }
-@media screen and (max-width: 1319px) {
+@media screen and (max-width: 1320px) {
     .open {
         display: flex !important;
         position: fixed;
