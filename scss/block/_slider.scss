@@ -15,6 +15,11 @@
         margin-bottom: 60px;
     }
 
+    @media screen and (max-width: 903px) {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
     .splide_event {
 
         .splide__track {
@@ -22,16 +27,16 @@
             .splide__list {
 
                 .splide__slide {
-                    display: flex;
 
                     a {
-                        width: 856px;
-                        height: 464px;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
                         overflow: hidden;
                         border-radius: 12px;
                          img {
-                            width: 856px;
-                            height: 464px;
+                            width: 100%;
+                            height: 100%;
                             object-fit: cover;
                          }
                     }
@@ -50,6 +55,10 @@
             gap: 24px;
         }
 
+        @media screen and (max-width: 903px) {
+            gap: 12px;
+        }
+
         .thumbnail {
             cursor: pointer;
             max-width: 100%;
@@ -63,7 +72,7 @@
             justify-content: flex-start;
             background-color: rgba(0, 0, 0, 0.05);
             border-radius: 8px;
-            filter: brightness(30%);
+            filter: brightness(50%);
             opacity: 0.5;
             gap: 12px;
 
@@ -71,6 +80,13 @@
                 width: 196px;
                 height: 276px;
                 flex-flow: column nowrap;
+            }
+
+            @media screen and (max-width: 903px) {
+                width: 150px;
+                height: 210px;
+                padding: 6px;
+                gap: 6px;
             }
 
             &.is-active {
@@ -90,6 +106,10 @@
                         height: 172px;
                     }
 
+                    @media screen and (max-width: 903px) {
+                        height: 138px;
+                    }
+
                 }
 
                 p {
@@ -106,6 +126,12 @@
                     @media screen and (max-width: 1320px) {
                         width: 100%;
                         height: 68px;
+                        font-size: 14px;
+                    }
+
+                    @media screen and (max-width: 903px) {
+                        height: 50px;
+                        font-size: 12px;
                     }
                 }
             

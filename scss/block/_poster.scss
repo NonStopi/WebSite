@@ -15,6 +15,10 @@
         color: #191919;
         font-weight: 700;
         line-height: 140%;
+
+        @media screen and (max-width: 903px) {
+            font-size: 40px;
+        }
     }
 
     .all_event {
@@ -23,8 +27,19 @@
         gap: 35px;
         flex-flow: row nowrap;
 
+        @media screen and (max-width: 903px) {
+            gap: 20px;
+        }
+
         img {
+            width: 40px;
+            height: 40px;
             padding: 2.5px;
+
+            @media screen and (max-width: 903px) {
+                width: 35px;
+                height: 35px;
+            }
         }
 
         p {
@@ -56,6 +71,10 @@
         margin-bottom: 60px;
     }
 
+    @media screen and (max-width: 903px) {
+        gap: 12px;
+    }
+
     .poster_line {
         width: 100%;
         display: flex;
@@ -71,8 +90,13 @@
         @media screen and (max-width: 1320px) {
             width: 416px;
             padding: 12px;
-            gap: 12px;
+            gap: 24px;
             flex-flow: column nowrap;
+        }
+
+        @media screen and (max-width: 903px) {
+            width: 315px;
+            gap: 12px;
         }
 
         .data_poster {
@@ -109,6 +133,12 @@
                 }
 
             }
+
+            @media screen and (max-width: 903px) {
+                .p_int, .p_string {
+                    font-size: 20px;
+                }
+            }
         }
 
         .poster_img {
@@ -119,8 +149,12 @@
             overflow: hidden;
 
             @media screen and (max-width: 1320px){
-                max-width: 416px;
+                width: 416px;
                 height: 260px;
+            }
+
+            @media screen and (max-width: 903px) {
+                width: 302px;
             }
 
             img {
@@ -130,10 +164,6 @@
                 width: 100%;
                 max-width: 320px;
                 height: 100%;
-
-                @media screen and (max-width: 1320px){
-                    max-width: 416px;
-                }
             }
         }
 
@@ -146,13 +176,35 @@
             height: 240px;
             max-width: 415px;
 
+            @media screen and (max-width: 1320px) {
+                justify-content: flex-start;
+                gap: 12px;
+                height: auto;
+            }
+
+            @media screen and (max-width: 903px) {
+                height: auto;
+                justify-content: flex-start;
+                gap: 8px;
+            }
+
             .name_poster {
                 font-family: Arial;
                 font-size: 32px;
                 font-weight: 700;
                 line-height: 140%;
-                height: 60px;
+                height: 90px;
                 hyphens: none;
+
+                @media screen and (max-width: 1320px) {
+                    height: 70px;
+                    font-size: 26px;
+                }
+
+                @media screen and (max-width: 903px) {
+                    height: 45px;
+                    font-size: 20px;
+                }
             }
 
             .description {
@@ -161,24 +213,41 @@
                 font-weight: 400;
                 line-height: 140%;
                 hyphens: none;
-                height: 70px;
+                height: 90px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+
+                @media screen and (max-width: 1320px) {
+                    height: 70px;
+                    font-size: 16px;
+                }
+
+                @media screen and (max-width: 903px) {
+                    height: 40px;
+                    font-size: 14px;
+                }
             }
 
             .poster_parametr {
                 display: flex;
                 flex-direction: row;
+                gap: 30px;
 
                 p {
                     display: flex;
                     align-items:center;
-                    margin-right: 30px;
+                    justify-content: flex-start;
+                    font-size: 16px;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 8px;
+                        }
+
                 }
 
-                img {
-                    margin-right: 20px;
-                }
+                
             }
 
         }
@@ -199,7 +268,6 @@
                 font-weight: 600;
                 line-height: 140%;
                 border:none;
-                margin-right: 30px;
 
                 &:hover {
                     background: rgb(4, 130, 109);

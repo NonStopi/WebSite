@@ -8,6 +8,13 @@ var splide = new Splide('#main-carousel',{
     arrows: boolean = false,
     autoplay: true,
     interval: 10000,
+    breakpoints: {
+      903: {
+          width: 636,
+          height: 345,
+
+      }
+    },
 });
 
 var thumbnails = document.getElementsByClassName('thumbnail');

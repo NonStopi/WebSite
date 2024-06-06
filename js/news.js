@@ -1,7 +1,7 @@
 const spiderNews = new Splide('#splideNews',{
     type: 'loop',
     pagination: false,
-    perPage: 3,
+    perPage: 2,
     perMove: 1,
     height: 400,
     width: 656,
@@ -14,6 +14,12 @@ const spiderNews = new Splide('#splideNews',{
             width: 856,
             padding: 0,
             focus: 'center',
+            perPage: 3,
+        },
+        903: {
+            width: 636, 
+            perPage: 2,
+            focus: 1,
         }
     },
 });

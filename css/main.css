@@ -360,8 +360,13 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
 }
 @media screen and (max-width: 1320px) {
   main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
-    width: 100%;
     max-width: 856px;
+  }
+}
+@media screen and (max-width: 903px) {
+  main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
+    max-width: 636px;
+    margin: 0 12px;
   }
 }
 main #poster, main #anons, main #contact, main #program {
@@ -386,18 +391,22 @@ main #poster, main #anons, main #contact, main #program {
     margin-bottom: 60px;
   }
 }
-.event_contener .splide_event .splide__track .splide__list .splide__slide {
-  display: flex;
+@media screen and (max-width: 903px) {
+  .event_contener {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
 }
 .event_contener .splide_event .splide__track .splide__list .splide__slide a {
-  width: 856px;
-  height: 464px;
+  display: flex;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   border-radius: 12px;
 }
 .event_contener .splide_event .splide__track .splide__list .splide__slide a img {
-  width: 856px;
-  height: 464px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 .event_contener .thumbnails {
@@ -409,6 +418,11 @@ main #poster, main #anons, main #contact, main #program {
   .event_contener .thumbnails {
     flex-flow: row nowrap;
     gap: 24px;
+  }
+}
+@media screen and (max-width: 903px) {
+  .event_contener .thumbnails {
+    gap: 12px;
   }
 }
 .event_contener .thumbnails .thumbnail {
@@ -424,7 +438,7 @@ main #poster, main #anons, main #contact, main #program {
   justify-content: flex-start;
   background-color: rgba(0, 0, 0, 0.05);
   border-radius: 8px;
-  filter: brightness(30%);
+  filter: brightness(50%);
   opacity: 0.5;
   gap: 12px;
 }
@@ -433,6 +447,14 @@ main #poster, main #anons, main #contact, main #program {
     width: 196px;
     height: 276px;
     flex-flow: column nowrap;
+  }
+}
+@media screen and (max-width: 903px) {
+  .event_contener .thumbnails .thumbnail {
+    width: 150px;
+    height: 210px;
+    padding: 6px;
+    gap: 6px;
   }
 }
 .event_contener .thumbnails .thumbnail.is-active {
@@ -451,6 +473,11 @@ main #poster, main #anons, main #contact, main #program {
     height: 172px;
   }
 }
+@media screen and (max-width: 903px) {
+  .event_contener .thumbnails .thumbnail img {
+    height: 138px;
+  }
+}
 .event_contener .thumbnails .thumbnail p {
   height: auto;
   max-height: 72px;
@@ -466,6 +493,13 @@ main #poster, main #anons, main #contact, main #program {
   .event_contener .thumbnails .thumbnail p {
     width: 100%;
     height: 68px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 903px) {
+  .event_contener .thumbnails .thumbnail p {
+    height: 50px;
+    font-size: 12px;
   }
 }
 
@@ -488,14 +522,32 @@ main #poster, main #anons, main #contact, main #program {
   font-weight: 700;
   line-height: 140%;
 }
+@media screen and (max-width: 903px) {
+  .header_poster .h2_poster {
+    font-size: 40px;
+  }
+}
 .header_poster .all_event {
   display: flex;
   align-items: center;
   gap: 35px;
   flex-flow: row nowrap;
 }
+@media screen and (max-width: 903px) {
+  .header_poster .all_event {
+    gap: 20px;
+  }
+}
 .header_poster .all_event img {
+  width: 40px;
+  height: 40px;
   padding: 2.5px;
+}
+@media screen and (max-width: 903px) {
+  .header_poster .all_event img {
+    width: 35px;
+    height: 35px;
+  }
 }
 .header_poster .all_event p {
   width: 220px;
@@ -524,6 +576,11 @@ main #poster, main #anons, main #contact, main #program {
     margin-bottom: 60px;
   }
 }
+@media screen and (max-width: 903px) {
+  .poster_block {
+    gap: 12px;
+  }
+}
 .poster_block .poster_line {
   width: 100%;
   display: flex;
@@ -540,8 +597,14 @@ main #poster, main #anons, main #contact, main #program {
   .poster_block .poster_line {
     width: 416px;
     padding: 12px;
-    gap: 12px;
+    gap: 24px;
     flex-flow: column nowrap;
+  }
+}
+@media screen and (max-width: 903px) {
+  .poster_block .poster_line {
+    width: 315px;
+    gap: 12px;
   }
 }
 .poster_block .poster_line .data_poster {
@@ -576,6 +639,11 @@ main #poster, main #anons, main #contact, main #program {
     opacity: 0;
   }
 }
+@media screen and (max-width: 903px) {
+  .poster_block .poster_line .data_poster .p_int, .poster_block .poster_line .data_poster .p_string {
+    font-size: 20px;
+  }
+}
 .poster_block .poster_line .poster_img {
   width: 100%;
   max-width: 320px;
@@ -584,8 +652,13 @@ main #poster, main #anons, main #contact, main #program {
 }
 @media screen and (max-width: 1320px) {
   .poster_block .poster_line .poster_img {
-    max-width: 416px;
+    width: 416px;
     height: 260px;
+  }
+}
+@media screen and (max-width: 903px) {
+  .poster_block .poster_line .poster_img {
+    width: 302px;
   }
 }
 .poster_block .poster_line .poster_img img {
@@ -594,11 +667,6 @@ main #poster, main #anons, main #contact, main #program {
   width: 100%;
   max-width: 320px;
   height: 100%;
-}
-@media screen and (max-width: 1320px) {
-  .poster_block .poster_line .poster_img img {
-    max-width: 416px;
-  }
 }
 .poster_block .poster_line .description_poster {
   display: flex;
@@ -609,13 +677,39 @@ main #poster, main #anons, main #contact, main #program {
   height: 240px;
   max-width: 415px;
 }
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line .description_poster {
+    justify-content: flex-start;
+    gap: 12px;
+    height: auto;
+  }
+}
+@media screen and (max-width: 903px) {
+  .poster_block .poster_line .description_poster {
+    height: auto;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+}
 .poster_block .poster_line .description_poster .name_poster {
   font-family: Arial;
   font-size: 32px;
   font-weight: 700;
   line-height: 140%;
-  height: 60px;
+  height: 90px;
   hyphens: none;
+}
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line .description_poster .name_poster {
+    height: 70px;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 903px) {
+  .poster_block .poster_line .description_poster .name_poster {
+    height: 45px;
+    font-size: 20px;
+  }
 }
 .poster_block .poster_line .description_poster .description {
   font-family: Fira Sans;
@@ -623,21 +717,37 @@ main #poster, main #anons, main #contact, main #program {
   font-weight: 400;
   line-height: 140%;
   hyphens: none;
-  height: 70px;
+  height: 90px;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+@media screen and (max-width: 1320px) {
+  .poster_block .poster_line .description_poster .description {
+    height: 70px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 903px) {
+  .poster_block .poster_line .description_poster .description {
+    height: 40px;
+    font-size: 14px;
+  }
 }
 .poster_block .poster_line .description_poster .poster_parametr {
   display: flex;
   flex-direction: row;
+  gap: 30px;
 }
 .poster_block .poster_line .description_poster .poster_parametr p {
   display: flex;
   align-items: center;
-  margin-right: 30px;
+  justify-content: flex-start;
+  font-size: 16px;
 }
-.poster_block .poster_line .description_poster .poster_parametr img {
-  margin-right: 20px;
+.poster_block .poster_line .description_poster .poster_parametr p img {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
 }
 .poster_block .poster_line .button_post {
   display: flex;
@@ -655,7 +765,6 @@ main #poster, main #anons, main #contact, main #program {
   font-weight: 600;
   line-height: 140%;
   border: none;
-  margin-right: 30px;
 }
 .poster_block .poster_line .button_post button:hover {
   background: rgb(4, 130, 109);
@@ -747,6 +856,11 @@ main #poster, main #anons, main #contact, main #program {
 }
 .news_wreaper .news .splite_news {
   left: -10px;
+}
+@media screen and (max-width: 1320px) {
+  .news_wreaper .news .splite_news {
+    left: 0;
+  }
 }
 .news_wreaper .news .splite_news .splide__track {
   width: 100%;
@@ -910,6 +1024,11 @@ main #poster, main #anons, main #contact, main #program {
   justify-content: flex-start;
   background-color: rgba(25, 25, 25, 0.05);
   overflow: hidden;
+}
+@media screen and (max-width: 1320px) {
+  .calendar {
+    align-self: center;
+  }
 }
 .calendar .img_cal {
   display: flex;

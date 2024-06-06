@@ -9,6 +9,10 @@
     background-color: rgba(25, 25, 25, 0.05);
     overflow: hidden;
 
+    @media screen and (max-width: 1320px) {
+        align-self: center;
+    }
+
     .img_cal {
         display: flex;
         flex-flow: column nowrap;
