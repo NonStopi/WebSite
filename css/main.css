@@ -369,6 +369,12 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
     margin: 0 12px;
   }
 }
+@media screen and (max-width: 659px) {
+  main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
+    max-width: 264px;
+    margin: 0 6px;
+  }
+}
 main #poster, main #anons, main #contact, main #program {
   flex-flow: column nowrap;
 }
