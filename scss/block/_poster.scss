@@ -48,6 +48,11 @@
         gap: 12px;
     }
 
+    @media screen and (max-width: 659px){
+        flex-flow: column nowrap;
+        gap: 20px;
+    }
+
     .poster_line {
         width: 100%;
         display: flex;

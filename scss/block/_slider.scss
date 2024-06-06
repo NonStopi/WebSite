@@ -20,6 +20,11 @@
         margin-bottom: 30px;
     }
 
+    @media screen and (max-width: 659px) {
+        gap: 6px;
+        margin-bottom: 15px;
+    }
+
     .splide_event {
 
         .splide__track {
@@ -57,6 +62,10 @@
 
         @media screen and (max-width: 903px) {
             gap: 12px;
+        }
+
+        @media screen and (max-width: 659px) {
+            gap: 6px;
         }
 
         .thumbnail {

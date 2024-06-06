@@ -435,6 +435,12 @@ main #poster, main #anons, main #contact, main #program {
     margin-bottom: 30px;
   }
 }
+@media screen and (max-width: 659px) {
+  .event_contener {
+    gap: 6px;
+    margin-bottom: 15px;
+  }
+}
 .event_contener .splide_event .splide__track .splide__list .splide__slide a {
   display: flex;
   width: 100%;
@@ -461,6 +467,11 @@ main #poster, main #anons, main #contact, main #program {
 @media screen and (max-width: 903px) {
   .event_contener .thumbnails {
     gap: 12px;
+  }
+}
+@media screen and (max-width: 659px) {
+  .event_contener .thumbnails {
+    gap: 6px;
   }
 }
 .event_contener .thumbnails .thumbnail {
@@ -592,6 +603,12 @@ main #poster, main #anons, main #contact, main #program {
 @media screen and (max-width: 903px) {
   .poster_block {
     gap: 12px;
+  }
+}
+@media screen and (max-width: 659px) {
+  .poster_block {
+    flex-flow: column nowrap;
+    gap: 20px;
   }
 }
 .poster_block .poster_line {
