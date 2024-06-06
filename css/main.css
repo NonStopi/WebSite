@@ -234,6 +234,16 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
   max-width: 1296px;
   margin: 0 24px;
   height: 100%;
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 1320px) {
+  main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
+    max-width: 1320px;
+  }
+}
+main #poster, main #anons, main #contact, main #program {
+  flex-flow: column nowrap;
 }
 
 .event_contener {
@@ -339,7 +349,6 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
 
 .header_poster {
   font-family: arial;
-  width: 100%;
   max-width: 1296px;
   display: flex;
   align-items: center;
@@ -355,25 +364,32 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
 .header_poster .all_event {
   display: flex;
   align-items: center;
+  gap: 35px;
+  flex-flow: row nowrap;
 }
 .header_poster .all_event img {
   padding: 2.5px;
 }
 .header_poster .all_event p {
+  width: 220px;
   font-size: 24px;
   font-weight: 700;
   line-height: 140%;
-  letter-spacing: 0%;
-  margin-left: 35px;
   color: #000;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .poster_block {
-  font-family: Arial;
-  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1296px;
   display: flex;
   align-items: center;
   flex-flow: column nowrap;
+}
+@media screen and (max-width: 1320px) {
+  .poster_block {
+    width: 1320px;
+  }
 }
 .poster_block .poster_line {
   width: 100%;

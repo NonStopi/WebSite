@@ -1,6 +1,5 @@
 .header_poster {
     font-family: arial;
-    width: 100%;
     max-width: 1296px;
     display: flex;
     align-items:center;
@@ -17,28 +16,34 @@
     .all_event {
         display: flex;
         align-items:center;
+        gap: 35px;
+        flex-flow: row nowrap;
 
         img {
             padding: 2.5px;
         }
 
         p {
+            width: 220px;
             font-size: 24px;
             font-weight: 700;
             line-height: 140%;
-            letter-spacing: 0%;
-            margin-left: 35px;
             color: #000;
+            font-family: Arial, Helvetica, sans-serif;
         }
     }
 }
 
 .poster_block {
-    font-family: Arial;
-    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 1296px;
     display: flex;
     align-items:center;
     flex-flow: column nowrap;
+
+    @media screen and (max-width: 1320px) {
+        width: 1320px;
+    }
 
     .poster_line {
         width: 100%;
