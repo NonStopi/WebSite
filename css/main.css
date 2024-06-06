@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+.open {
+  display: flex !important;
+}
+
 @media (max-width: 1319px) {
   header {
     background: #191919;
@@ -78,11 +82,10 @@
     translate: -50%;
   }
   header .header_contener .navigation {
-    display: flex;
+    display: none;
     flex-direction: column;
   }
   header .header_contener .navigation .logo {
-    display: flex;
     height: 100%;
     max-width: 40px;
   }
