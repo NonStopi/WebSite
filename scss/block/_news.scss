@@ -27,6 +27,14 @@
             font-weight: 700;
             line-height: 140%;
             color: #191919;
+
+            @media screen and (max-width: 1320px) {
+                font-size: 42px;
+            }
+
+            @media screen and (max-width: 903px) {
+                font-size: 38px;
+            }
         }
 
         .splite_news{

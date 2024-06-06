@@ -12,23 +12,13 @@
         color: #191919;
         font-weight: 700;
         line-height: 140%;
-    }
 
-    .all_event {
-        display: flex;
-        align-items:center;
-
-        img {
-            padding: 2.5px;
+        @media screen and (max-width: 1320px) {
+            font-size: 42px;
         }
 
-        p {
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 140%;
-            letter-spacing: 0%;
-            margin-left: 35px;
-            color: #000;
+        @media screen and (max-width: 903px) {
+            font-size: 38px;
         }
     }
 }
@@ -41,7 +31,7 @@
         align-self: flex-start;
     }
 
-    @media screen and (max-width: 1320px) {
+    @media screen and (max-width: 903px) {
         flex-flow: column nowrap;
         justify-content: flex-start;
         gap: 12px;
