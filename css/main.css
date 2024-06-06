@@ -354,17 +354,11 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
 @media screen and (max-width: 1320px) {
   main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
     width: 100%;
-    max-width: 904px;
+    max-width: 856px;
   }
 }
 main #poster, main #anons, main #contact, main #program {
   flex-flow: column nowrap;
-}
-
-@media screen and (max-width: 1320px) {
-  #event {
-    margin-top: 200px;
-  }
 }
 
 .event_contener {

@@ -20,17 +20,11 @@ main {
 
         @media screen and (max-width: 1320px) {
             width: 100%;
-            max-width: 904px;
+            max-width: 856px;
         }
     }
 
     #poster, #anons, #contact, #program {
         flex-flow: column nowrap;
-    }
-}
-
-#event {
-    @media screen and (max-width: 1320px) {
-        margin-top: 200px;
     }
 }
