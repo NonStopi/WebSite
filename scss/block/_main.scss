@@ -5,7 +5,9 @@ main {
     justify-content: center;
     flex-flow: column nowrap;
 
-    
+    @media screen and (max-width: 1320px) {
+        padding-top: 124px;
+    }
 
     #event, #poster, #newsCal, #anons, #contact, #program {
         width: 100%;
@@ -27,3 +29,8 @@ main {
     }
 }
 
+#event {
+    @media screen and (max-width: 1320px) {
+        margin-top: 200px;
+    }
+}
