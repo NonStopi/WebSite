@@ -1,0 +1,36 @@
+{{ define "header" }}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/css/main.min.css">
+    <title>Сайт концертно-экскурсионных программ</title>
+</head>
+<body>
+    <header>
+        <div class="header_contener">
+            <nav class="navigation">
+                <div class="logo">
+                    <a href="/">
+                        <img src="../static/icon/logo.svg" alt="logo" srcset="">
+                    </a>
+                </div>
+                <div class="header_main_menu">
+                    <ul>
+                        <li><a href="/event/">Афиша</a></li>
+                        <li><a href="">Заказ билетов</a></li>
+                        <li><a href="/contact/">Контакты</a></li>
+                        <li><a href="">История дворца</a></li>
+                        <li><a href="">Галерия</a></li>
+                        <li><a href="">Планы залов</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+{{ end }}

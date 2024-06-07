@@ -1,0 +1,23 @@
+{{ define "event" }}
+
+{{ template "header" }}
+<main>
+    <section id="poster">
+        <div class="header_poster">
+            <h2 class="h2_poster">Афиша</h2>
+            <a href="">
+                <div class="all_event">
+                    <img src="icons/calendar.svg" alt="calendar">
+                    <p>Все Мероприятия</p>
+                </div>
+            </a>
+        </div>
+        <div class="poster_block">
+            {{ template "linePoster" }}
+        </div>
+    </section>
+</main>
+
+{{ template "footer" }}
+
+{{ end }}
