@@ -48,6 +48,13 @@
     flex-flow: row nowrap;
     justify-content: center;
 
+    @media screen and (max-width: 659px) {
+        flex-flow: column;
+        gap: 20px;
+        align-items: center;
+        padding: 10px;
+    }
+
     .info {
         width: 100%;
         max-width: 150px;

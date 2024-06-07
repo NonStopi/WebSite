@@ -6,6 +6,11 @@
     align-items:center;
     margin-bottom: 100px;
     justify-content: space-between;
+    @media screen and (max-width: 659px) {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        gap: 10px
+    }
 
     .h2_anonc {
         font-size: 48px;
@@ -20,6 +25,10 @@
         @media screen and (max-width: 903px) {
             font-size: 38px;
         }
+
+        @media screen and (max-width: 659px) {
+            font-size: 26px;
+        }
     }
 }
 .short_anonc_main {
@@ -29,12 +38,13 @@
     justify-content: space-between;
     @media screen and (max-width: 1320px) {
         align-self: flex-start;
+        flex-flow: column nowrap;
+        gap: 12px;
     }
 
-    @media screen and (max-width: 903px) {
-        flex-flow: column nowrap;
-        justify-content: flex-start;
-        gap: 12px;
+
+    @media screen and (max-width: 659px) {
+        gap: 6px;
     }
 
     .short_anonc_item {
@@ -42,6 +52,10 @@
         flex-direction: row;
         align-items: center;
         gap: 27px;
+
+        @media screen and (max-width: 659px) {
+            gap: 10px;
+        }
 
         div {
             display: flex;
@@ -53,12 +67,21 @@
             background: rgb(5, 176, 147);
             border-radius: 12px;
 
+            @media screen and (max-width: 659px) {
+                width: 50px;
+                height: 50px;
+            }
+
             .data_anonc {
                 text-align: center;
                 font-size: 32px;
                 font-weight: 700;
                 line-height: 140%;
                 color: #fff;
+
+                @media screen and (max-width: 659px) {
+                    font-size: 20px;
+                }
             }
 
             .mount_anonc {
@@ -67,6 +90,10 @@
                 font-weight: 700;
                 line-height: 140%;
                 color: #fff;
+
+                @media screen and (max-width: 659px) {
+                    font-size: 13px;
+                }
             }
         }
 
@@ -76,6 +103,11 @@
             font-weight: 600;
             line-height: 140%;
             padding-right: 12px;
+
+            @media screen and (max-width: 659px){
+                font-size: 12px;
+                padding: 0;
+            }
         }
     }
     

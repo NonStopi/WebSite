@@ -10,6 +10,12 @@
         margin-bottom: 20px;
     }
 
+    @media screen and (max-width: 659px) {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        gap: 10px
+    }
+
     .h2_poster {
         font-size: 48px;
         color: #191919;
@@ -22,6 +28,10 @@
 
         @media screen and (max-width: 903px) {
             font-size: 38px;
+        }
+
+        @media screen and (max-width: 659px) {
+            font-size: 26px;
         }
     }
 }

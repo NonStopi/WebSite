@@ -20,7 +20,15 @@ const spiderNews = new Splide('#splideNews',{
             width: 636, 
             perPage: 2,
             focus: 1,
-        }
+        },
+        659: { width: 306, perPage:1},
+        600: { width: 306, perPage:1},
+        550: { width: 306, perPage:1},
+        500: { width: 306, perPage:1},
+        450: { width: 306, perPage:1},
+        400: { width: 306, perPage:1},
+        350: { width: 306, perPage:1},
+        300: { width: 306, perPage:1},
     },
 });
 

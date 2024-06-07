@@ -13,7 +13,19 @@ var splide = new Splide('#main-carousel',{
           width: 636,
           height: 345,
 
-      }
+      },
+      850:{wigth: '100%', height: 494},
+      800:{wigth: '100%', height: 464},
+      750:{wigth: '100%', height: 435},
+      700:{wigth: '100%', height: 406},
+      659:{wigth: '100%', height: 383,pagination: true,},
+      600:{wigth: '100%', height: 348},
+      550:{wigth: '100%', height: 319},
+      500:{wigth: '100%', height: 290},
+      450:{wigth: '100%', height: 261},
+      400:{wigth: '100%', height: 232},
+      350:{wigth: '100%', height: 203},
+      300:{wigth: '100%', height: 174},
     },
 });
 

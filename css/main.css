@@ -99,14 +99,23 @@ header .header_contener .navigation {
 }
 header .header_contener .navigation .logo {
   height: 40px;
-  width: 200px;
+  width: 350px;
+  overflow: hidden;
 }
 header .header_contener .navigation .logo a {
   width: 100%;
   height: 100%;
 }
 header .header_contener .navigation .logo a img {
-  height: 40px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 659px) {
+  header .header_contener .navigation .logo {
+    width: 230px;
+    height: 25px;
+  }
 }
 @media screen and (max-width: 1320px) {
   header .header_contener .navigation .header_main_menu {
@@ -372,8 +381,8 @@ main #event, main #poster, main #newsCal, main #anons, main #contact, main #prog
 }
 @media screen and (max-width: 659px) {
   main #event, main #poster, main #newsCal, main #anons, main #contact, main #program {
-    max-width: 264px;
-    margin: 0 6px;
+    max-width: 95%;
+    margin: 0 2px;
   }
 }
 main #poster, main #anons, main #contact, main #program {
@@ -391,6 +400,11 @@ main #poster, main #anons, main #contact, main #program {
     gap: 20px;
   }
 }
+@media screen and (max-width: 659px) {
+  .all_event {
+    gap: 10px;
+  }
+}
 .all_event img {
   width: 40px;
   height: 40px;
@@ -402,6 +416,12 @@ main #poster, main #anons, main #contact, main #program {
     height: 35px;
   }
 }
+@media screen and (max-width: 659px) {
+  .all_event img {
+    width: 25px;
+    height: 25px;
+  }
+}
 .all_event p {
   width: 220px;
   font-size: 24px;
@@ -409,6 +429,12 @@ main #poster, main #anons, main #contact, main #program {
   line-height: 140%;
   color: #000;
   font-family: Arial, Helvetica, sans-serif;
+  text-decoration: underline;
+}
+@media screen and (max-width: 659px) {
+  .all_event p {
+    font-size: 18px;
+  }
 }
 
 .event_contener {
@@ -471,7 +497,9 @@ main #poster, main #anons, main #contact, main #program {
 }
 @media screen and (max-width: 659px) {
   .event_contener .thumbnails {
-    gap: 6px;
+    width: 0;
+    height: 0;
+    display: none;
   }
 }
 .event_contener .thumbnails .thumbnail {
@@ -565,6 +593,13 @@ main #poster, main #anons, main #contact, main #program {
     margin-bottom: 20px;
   }
 }
+@media screen and (max-width: 659px) {
+  .header_poster {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
 .header_poster .h2_poster {
   font-size: 48px;
   color: #191919;
@@ -579,6 +614,11 @@ main #poster, main #anons, main #contact, main #program {
 @media screen and (max-width: 903px) {
   .header_poster .h2_poster {
     font-size: 38px;
+  }
+}
+@media screen and (max-width: 659px) {
+  .header_poster .h2_poster {
+    font-size: 26px;
   }
 }
 
@@ -870,10 +910,18 @@ main #poster, main #anons, main #contact, main #program {
   width: 100%;
   height: 100%;
   max-width: 656px;
+  display: flex;
+  flex-flow: column;
 }
 @media screen and (max-width: 1320px) {
   .news_wreaper .news {
     max-width: 856px;
+  }
+}
+@media screen and (max-width: 659px) {
+  .news_wreaper .news {
+    align-items: center;
+    justify-content: center;
   }
 }
 .news_wreaper .news h2 {
@@ -892,6 +940,11 @@ main #poster, main #anons, main #contact, main #program {
 @media screen and (max-width: 903px) {
   .news_wreaper .news h2 {
     font-size: 38px;
+  }
+}
+@media screen and (max-width: 659px) {
+  .news_wreaper .news h2 {
+    font-size: 26px;
   }
 }
 .news_wreaper .news .splite_news {
@@ -1103,6 +1156,14 @@ main #poster, main #anons, main #contact, main #program {
   flex-flow: row nowrap;
   justify-content: center;
 }
+@media screen and (max-width: 659px) {
+  .calendar-container {
+    flex-flow: column;
+    gap: 20px;
+    align-items: center;
+    padding: 10px;
+  }
+}
 .calendar-container .info {
   width: 100%;
   max-width: 150px;
@@ -1201,6 +1262,13 @@ main #poster, main #anons, main #contact, main #program {
   margin-bottom: 100px;
   justify-content: space-between;
 }
+@media screen and (max-width: 659px) {
+  .short_anonc_header {
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+}
 .short_anonc_header .h2_anonc {
   font-size: 48px;
   color: #191919;
@@ -1217,6 +1285,11 @@ main #poster, main #anons, main #contact, main #program {
     font-size: 38px;
   }
 }
+@media screen and (max-width: 659px) {
+  .short_anonc_header .h2_anonc {
+    font-size: 26px;
+  }
+}
 
 .short_anonc_main {
   display: flex;
@@ -1227,13 +1300,13 @@ main #poster, main #anons, main #contact, main #program {
 @media screen and (max-width: 1320px) {
   .short_anonc_main {
     align-self: flex-start;
+    flex-flow: column nowrap;
+    gap: 12px;
   }
 }
-@media screen and (max-width: 903px) {
+@media screen and (max-width: 659px) {
   .short_anonc_main {
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    gap: 12px;
+    gap: 6px;
   }
 }
 .short_anonc_main .short_anonc_item {
@@ -1241,6 +1314,11 @@ main #poster, main #anons, main #contact, main #program {
   flex-direction: row;
   align-items: center;
   gap: 27px;
+}
+@media screen and (max-width: 659px) {
+  .short_anonc_main .short_anonc_item {
+    gap: 10px;
+  }
 }
 .short_anonc_main .short_anonc_item div {
   display: flex;
@@ -1252,12 +1330,23 @@ main #poster, main #anons, main #contact, main #program {
   background: rgb(5, 176, 147);
   border-radius: 12px;
 }
+@media screen and (max-width: 659px) {
+  .short_anonc_main .short_anonc_item div {
+    width: 50px;
+    height: 50px;
+  }
+}
 .short_anonc_main .short_anonc_item div .data_anonc {
   text-align: center;
   font-size: 32px;
   font-weight: 700;
   line-height: 140%;
   color: #fff;
+}
+@media screen and (max-width: 659px) {
+  .short_anonc_main .short_anonc_item div .data_anonc {
+    font-size: 20px;
+  }
 }
 .short_anonc_main .short_anonc_item div .mount_anonc {
   text-align: center;
@@ -1266,12 +1355,23 @@ main #poster, main #anons, main #contact, main #program {
   line-height: 140%;
   color: #fff;
 }
+@media screen and (max-width: 659px) {
+  .short_anonc_main .short_anonc_item div .mount_anonc {
+    font-size: 13px;
+  }
+}
 .short_anonc_main .short_anonc_item .name_anonc {
   font-family: Fira Sans;
   font-size: 14px;
   font-weight: 600;
   line-height: 140%;
   padding-right: 12px;
+}
+@media screen and (max-width: 659px) {
+  .short_anonc_main .short_anonc_item .name_anonc {
+    font-size: 12px;
+    padding: 0;
+  }
 }
 
 body {

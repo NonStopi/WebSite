@@ -28,8 +28,8 @@ main {
         }
 
         @media screen and (max-width: 659px) {
-            max-width: 264px;
-            margin: 0 6px;
+            max-width: 95%;
+            margin: 0 2px;
         }
     }
 
@@ -47,6 +47,10 @@ main {
         gap: 20px;
     }
 
+    @media screen and (max-width: 659px) {
+        gap:10px
+    }
+
     img {
         width: 40px;
         height: 40px;
@@ -55,6 +59,11 @@ main {
         @media screen and (max-width: 903px) {
             width: 35px;
             height: 35px;
+        }
+
+        @media screen and (max-width: 659px) {
+            width: 25px;
+            height: 25px;
         }
     }
 
@@ -65,5 +74,10 @@ main {
         line-height: 140%;
         color: #000;
         font-family: Arial, Helvetica, sans-serif;
+        text-decoration: underline;
+
+        @media screen and (max-width: 659px) {
+            font-size: 18px;
+        }
     }
 }
