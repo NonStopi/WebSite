@@ -21,6 +21,11 @@
 
     .program_colum {
         width: 49%;
+
+        @media  (max-width: 1250px) {
+            width: 100%;
+        }
+
         @media  (max-width: 910px) {
             width: 100%;
         }
@@ -48,6 +53,7 @@
             height: auto;
             object-fit: cover;
             @media  (max-width: 1250px) {
+                width: 90%;
                 margin-bottom: 20px;
             }
         }
@@ -95,8 +101,14 @@
         width: 50%;
         display: flex;
         flex-flow: column nowrap;
+
         @media  (max-width: 910px) {
             width: 100%;
+        }
+
+        @media  (max-width: 1250px) {
+            width: 100%;
+            align-items: center;
         }
     }
 }

@@ -1069,6 +1069,11 @@ main #poster, main #anons, main #contact, main #program {
 .program_block .program_colum {
   width: 49%;
 }
+@media (max-width: 1250px) {
+  .program_block .program_colum {
+    width: 100%;
+  }
+}
 @media (max-width: 910px) {
   .program_block .program_colum {
     width: 100%;
@@ -1100,6 +1105,7 @@ main #poster, main #anons, main #contact, main #program {
 }
 @media (max-width: 1250px) {
   .program_block .program_colum .img_poster {
+    width: 90%;
     margin-bottom: 20px;
   }
 }
@@ -1151,6 +1157,12 @@ main #poster, main #anons, main #contact, main #program {
 @media (max-width: 910px) {
   .program_block .program_general {
     width: 100%;
+  }
+}
+@media (max-width: 1250px) {
+  .program_block .program_general {
+    width: 100%;
+    align-items: center;
   }
 }
 
