@@ -11,6 +11,9 @@
     justify-content: space-around;
     flex-direction: row;
     width: 100%;
+    @media  (max-width: 910px) {
+        flex-direction: column;
+    }
 
     .contact_colum {
         h2 {
@@ -36,6 +39,9 @@
         width: 30%;
         display: flex;
         flex-flow: column nowrap;
+        @media  (max-width: 910px) {
+           width: 100%;
+        }
     }
 }
 .map {
@@ -44,6 +50,10 @@
     margin: 0 auto;
     background-color: black;
     border-radius: 12px;
+    @media  (max-width: 910px) {
+        width: 100%;
+        height: 70%;
+    }
 }
 [class*="copyrights-pane"] {
     display: none !important;

@@ -857,6 +857,11 @@ main #poster, main #anons, main #contact, main #program {
   flex-direction: row;
   width: 100%;
 }
+@media (max-width: 910px) {
+  .contact_block {
+    flex-direction: column;
+  }
+}
 .contact_block .contact_colum h2 {
   font-family: Arial;
   font-size: 24px;
@@ -879,6 +884,11 @@ main #poster, main #anons, main #contact, main #program {
   display: flex;
   flex-flow: column nowrap;
 }
+@media (max-width: 910px) {
+  .contact_block .contact_general {
+    width: 100%;
+  }
+}
 
 .map {
   width: 856px;
@@ -886,6 +896,12 @@ main #poster, main #anons, main #contact, main #program {
   margin: 0 auto;
   background-color: black;
   border-radius: 12px;
+}
+@media (max-width: 910px) {
+  .map {
+    width: 100%;
+    height: 70%;
+  }
 }
 
 [class*=copyrights-pane] {
@@ -1032,6 +1048,12 @@ main #poster, main #anons, main #contact, main #program {
   line-height: 140%;
   margin-bottom: 100px;
 }
+@media (max-width: 910px) {
+  .h1_program {
+    line-height: 80%;
+    margin-bottom: 35px;
+  }
+}
 
 .program_block {
   display: flex;
@@ -1039,8 +1061,18 @@ main #poster, main #anons, main #contact, main #program {
   flex-direction: row;
   width: 100%;
 }
+@media (max-width: 1250px) {
+  .program_block {
+    flex-direction: column;
+  }
+}
 .program_block .program_colum {
   width: 49%;
+}
+@media (max-width: 910px) {
+  .program_block .program_colum {
+    width: 100%;
+  }
 }
 .program_block .program_colum h2 {
   font-family: Arial;
@@ -1062,9 +1094,14 @@ main #poster, main #anons, main #contact, main #program {
 }
 .program_block .program_colum .img_poster {
   border-radius: 12px;
-  width: 526px;
-  height: 742px;
+  width: 90%;
+  height: auto;
   object-fit: cover;
+}
+@media (max-width: 1250px) {
+  .program_block .program_colum .img_poster {
+    margin-bottom: 20px;
+  }
 }
 .program_block .program_colum .button_post {
   display: flex;
@@ -1096,6 +1133,11 @@ main #poster, main #anons, main #contact, main #program {
   flex-flow: row nowrap;
   gap: 24px;
 }
+@media (max-width: 750px) {
+  .program_block .program_colum .program_photo {
+    flex-flow: column;
+  }
+}
 .program_block .program_colum .program_photo img {
   width: 306px;
   height: 210px;
@@ -1105,6 +1147,11 @@ main #poster, main #anons, main #contact, main #program {
   width: 50%;
   display: flex;
   flex-flow: column nowrap;
+}
+@media (max-width: 910px) {
+  .program_block .program_general {
+    width: 100%;
+  }
 }
 
 .calendar {
