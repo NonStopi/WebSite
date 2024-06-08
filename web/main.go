@@ -8,10 +8,10 @@ import (
 
 func index(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles(
-		"web/template/index.html",
-		"web/template/header.html",
-		"web/template/linePoster.html",
-		"web/template/footer.html",
+		"template/index.html",
+		"template/header.html",
+		"template/linePoster.html",
+		"template/footer.html",
 	)
 
 	if err != nil {
@@ -29,9 +29,9 @@ func index(w http.ResponseWriter, r *http.Request) {
 
 func contact(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles(
-		"web/template/contact.html",
-		"web/template/header.html",
-		"web/template/footer.html",
+		"template/contact.html",
+		"template/header.html",
+		"template/footer.html",
 	)
 
 	if err != nil {
@@ -49,10 +49,10 @@ func contact(w http.ResponseWriter, r *http.Request) {
 
 func event(w http.ResponseWriter, r *http.Request) {
 	t, err := template.ParseFiles(
-		"web/template/event.html",
-		"web/template/header.html",
-		"web/template/linePoster.html",
-		"web/template/footer.html",
+		"template/event.html",
+		"template/header.html",
+		"template/linePoster.html",
+		"template/footer.html",
 	)
 
 	if err != nil {
@@ -69,7 +69,7 @@ func event(w http.ResponseWriter, r *http.Request) {
 }
 
 func handleRequest() {
-	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./web/static/"))))
+	http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
 	http.HandleFunc("/", index)
 	http.HandleFunc("/contact/", contact)
 	http.HandleFunc("/event/", event)
