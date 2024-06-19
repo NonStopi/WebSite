@@ -1,8 +1,10 @@
 from django.http import HttpResponse
 from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
 
 # Create your views here.
 def index(request):
+    # t = render_to_string('') # доделать
     return HttpResponse("Старница приложения")
 
 def contact(request):
