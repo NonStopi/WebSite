@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="header_contener">
+            <nav class="navigation">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="logo" srcset="">
+                    </a>
+                </div>
+                <div class="header_main_menu">
+                    <ul>
+                        <li><a href="">Афиша</a></li>
+                        <li><a href="">Заказ билетов</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="">История дворца</a></li>
+                        <li><a href="">Галерия</a></li>
+                        <li><a href="">Планы залов</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="contact">
+            <h1 class="h1_contact">Контакты</h1>
+            <div class="contact_block">
+                <div class="contact_colum contact_general">
+                    <h2>Адрес</h2>
+                    <p>Россия, 191025, г. Санкт-Петербург, Невский пр., д. 1</p>
+                    <h2>Режим работы кассы Дворца:</h2>
+                    <p class="contact_grafic">понедельник: выходной</p>
+                    <p class="contact_grafic">вторник-суббота: с 11.00 до 19.00 час.</p>
+                    <p class="contact_grafic">воскресенье: с 11.00 до 17.00 час.</p>
+                    <p class="contact_grafic">перерыв: с 14.00 до 14.30 час.</p>
+                </div>
+                <div class="contact_colum ">
+                    <h2>Билетная касса, заказ экскурсий:</h2>
+                    <p>8(800)555-35-35</p>
+                    <h2>Аренда концертного/конференц зала:</h2>
+                    <p>8(800)555-35-35</p>
+                    <h2>VK</h2>
+                    <a href="">
+                        <p>vk.ru</p>
+                    </a>
+                </div>
+            </div>
+            <div id="map" class="map"></div>
+            <script src="https://api-maps.yandex.ru/2.1/?apikey=КлючApi&lang=ru_RU"></script>
+            <!-- <script src="https://api-maps.yandex.ru/v3/?apikey=КлючApi&lang=ru_RU"></script> -->
+            <script src="js/map.js"></script>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_wreaper">
+            <div class="icon"><img src="./img/logo.svg" alt="icon"></div>
+            <div class="even">
+                <h3>Мероприятия</h3>
+                <ul>
+                    <li><a href="">Экскурсии</a></li>
+                    <li><a href="">Концерты</a></li>
+                    <li><a href="">Афиша</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Контакты</h3>
+                <ul>
+                    <li>г. Санкт-Петербург, Невский пр., д.1</li>
+                    <li>shangin67886788@gmail.com</li>
+                    <li>8(880)055355</li>
+                </ul>
+            </div>
+        </div>
+        <div class="watermark">Сайт концертно-экскурсионных программ</div>
+    </footer>
+    <script src="js/header.js"></script>
+</body>
+</html>

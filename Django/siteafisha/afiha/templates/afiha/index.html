@@ -1,0 +1,301 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="{% static "afiha/css/main.css" %}">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <header>
+        <div class="header_contener">
+            <nav class="navigation">
+                <div class="logo">
+                    <a href="#">
+                        <img src="img/logo.svg" alt="logo" srcset="">
+                    </a>
+                </div>
+                <div class="header_main_menu">
+                    <ul>
+                        <li><a href="">Афиша</a></li>
+                        <li><a href="">Заказ билетов</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                        <li><a href="">История дворца</a></li>
+                        <li><a href="">Галерия</a></li>
+                        <li><a href="">Планы залов</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="burger">
+                <span></span>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="event">
+            <div class="event_contener">
+                <section id="main-carousel" class="splide splide_event">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <a href="#">
+                                    <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="#">
+                                    <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="#">
+                                    <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="">
+                                </a>
+                            </li>
+                            <li class="splide__slide">
+                                <a href="#">
+                                    <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <ul class="thumbnails">
+                    <li class="thumbnail">
+                        <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                    <li class="thumbnail">
+                        <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                    <li class="thumbnail">
+                        <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                    <li class="thumbnail">
+                        <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section id="poster">
+            <div class="header_poster">
+                <h2 class="h2_poster">Афиша</h2>
+                <a href="">
+                    <div class="all_event">
+                        <img src="Icons/calendar.svg" alt="calendar">
+                        <p>Все Мероприятия</p>
+                    </div>
+                </a>
+            </div>
+            <div class="poster_block">
+                <div class="poster_line">
+                    <div class="data_poster">
+                        <p class="p_int">6</p>
+                        <p class="p_string">Мая</p>
+                    </div>
+                    <div class="poster_img">
+                        <img src="img/poster__image1.png" alt="poster__image1">
+                    </div>
+                    <div class="description_poster">
+                        <p class="name_poster">Антонио Вивальди. Времена года</p>
+                        <p class="description">Посвящение Фрэнку Синатре.</p>
+                        <div class="poster_parametr">
+                            <p class="type_poster">
+                                <img src="Icons/Janr.svg" alt="Janr">
+                                Джаз
+                            </p>
+                            <p class="type_poster">
+                                <img src="Icons/Time.svg" alt="Time">
+                                19:00
+                            </p>
+                            <p class="type_poster">
+                                <img src="Icons/age.svg" alt="age">
+                                6+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="button_post">
+                        <button type="button">Заказать билет</button>
+                    </div>
+                </div>
+                <div class="poster_line">
+                    <div class="data_poster">
+                        <p class="p_int">30</p>
+                        <p class="p_string">Сентября</p>
+                    </div>
+                    <div class="poster_img">
+                        <img src="img/poster__image1.png" alt="poster__image1">
+                    </div>
+                    <div class="description_poster">
+                        <p class="name_poster">Антонио Вивальди. Времена года</p>
+                        <p class="description">Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.</p>
+                        <div class="poster_parametr">
+                            <p class="type_poster">
+                                <img src="Icons/Janr.svg" alt="Janr">
+                                Джаз
+                            </p>
+                            <p class="type_poster">
+                                <img src="Icons/Time.svg" alt="Time">
+                                19:00
+                            </p>
+                            <p class="type_poster">
+                                <img src="Icons/age.svg" alt="age">
+                                6+
+                            </p>
+                        </div>
+                    </div>
+                    <div class="button_post">
+                        <button type="button">Заказать билет</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="newsCal">
+            <div class="news_wreaper">
+                <div class="news">
+                    <h2>Новости</h2>
+                    <div id="splideNews" class="splide splite_news" role="group">
+                        <div class="splide__track">
+                            <ul class="splide__list">
+                                <li class="splide__slide">
+                                    <a href="">
+                                        <div class="splide__slide__container">
+                                            <img src="img/main_afisha.png" alt="">
+                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, voluptatem.</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, asperiores distinctio. Nobis, ratione, nulla cupiditate optio aspernatur nisi ab accusantium deserunt perspiciatis consequuntur delectus itaque repellendus quod animi tempore nihil?</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="">
+                                        <div class="splide__slide__container">
+                                            <img src="img/poster__image1.png" alt="">
+                                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="">
+                                        <div class="splide__slide__container">
+                                            <img src="img/thumb-slider__image.png" alt="">
+                                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="splide__slide">
+                                    <a href="">
+                                        <div class="splide__slide__container">
+                                            <img src="img/thumb-slider__image2.png" alt="">
+                                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
+                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div> 
+                </div>
+                <div class="calendar">
+                    <div class="img_cal">
+                        <img src="img/calendar__image.png" alt="">
+                        <p>Афиша дня</p>
+                    </div>
+                    <div class="calendar-container">
+                        <div class="info">
+                            <div class="date_cal">
+                                <h2 id="month"></h2>
+                                <h2 id="year"></h2>
+                            </div>
+
+                            <div class="button_cal">
+                                <button id="prevMonth">&#8249;</button>
+                                <button id="nextMonth">&#8250;</button>
+                            </div>
+                        </div>
+                        <div class="table_cal">
+                            <table id="calendar"></table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="anons">
+            <div class="short_anonc_header">
+                <h2 class="h2_anonc">Краткие анонсы</h2>
+                <a href="">
+                    <div class="all_event">
+                        <img src="Icons/calendar.svg" alt="calendar">
+                        <p>Все Мероприятия</p>
+                    </div>
+                </a>
+            </div>
+            <div class="short_anonc_main">
+                <div class="short_anonc_item">
+                    <div>
+                        <p class="data_anonc">З</p>
+                        <p class="mount_anonc">ИЮНЯ</p>
+                    </div>
+                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
+                </div>
+                <div class="short_anonc_item">
+                    <div>
+                        <p class="data_anonc">З</p>
+                        <p class="mount_anonc">ИЮНЯ</p>
+                    </div>
+                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
+                </div>
+                <div class="short_anonc_item">
+                    <div>
+                        <p class="data_anonc">З</p>
+                        <p class="mount_anonc">ИЮНЯ</p>
+                    </div>
+                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
+                </div>
+                <div class="short_anonc_item">
+                    <div>
+                        <p class="data_anonc">З</p>
+                        <p class="mount_anonc">ИЮНЯ</p>
+                    </div>
+                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer_wreaper">
+            <div class="icon"><img src="./img/logo.svg" alt="icon"></div>
+            <div class="even">
+                <h3>Мероприятия</h3>
+                <ul>
+                    <li><a href="">Экскурсии</a></li>
+                    <li><a href="">Концерты</a></li>
+                    <li><a href="">Афиша</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h3>Контакты</h3>
+                <ul>
+                    <li>г. Санкт-Петербург, Невский пр., д.1</li>
+                    <li>shangin67886788@gmail.com</li>
+                    <li>8(880)055355</li>
+                </ul>
+            </div>
+        </div>
+        <div class="watermark">Сайт концертно-экскурсионных программ</div>
+    </footer>
+    <script src="{% static "afiha/js/header.js" %}"></script>
+    <script src="{% static "afiha/js/calendar.js" %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <script src="{% static "afiha/js/news.js" %}"></script>
+    <script src="{% static "afiha/js/event.js" %}"></script>
+</body>
+</html>

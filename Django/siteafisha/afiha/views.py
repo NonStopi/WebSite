@@ -4,11 +4,12 @@ from django.template.loader import render_to_string
 
 # Create your views here.
 def index(request):
-    # t = render_to_string('') # доделать
-    return HttpResponse("Старница приложения")
+    data = {'title': 'Сайт концертно-экскурсионных программ'}
+    return render(request, 'afiha/index.html', context=data)
 
 def contact(request):
-    return HttpResponse("<h1>контакты</h1>")
+    data = {'title': 'Контакты'}
+    return render(request, 'afiha/contact.html', context=data)
 
 def poster(request, poster_id):
     return HttpResponse(f"<h1>постер №: {poster_id}</h1>")
