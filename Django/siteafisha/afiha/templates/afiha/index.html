@@ -21,7 +21,7 @@
                     {% for th in slider %}
                         <li class="thumbnail">
                             <img src="{{ th.url_image }}" alt="">
-                            <p>{{ th.title_slider }}</p>
+                            <p>{{ th.title_slider|truncatewords:10 }}</p>
                         </li>
                     {% endfor %}
                 </ul>
@@ -58,8 +58,8 @@
                                         <a href="{% url "news_id" n.id %}">
                                             <div class="splide__slide__container">
                                                 <img src="{{ n.url_image }}" alt="">
-                                                <h3>{{ n.title_news }}</h3>
-                                                <p>{{ n.des_news }}</p>
+                                                <h3>{{ n.title_news|truncatewords:5 }}</h3>
+                                                <p>{{ n.des_news|truncatewords:11 }}</p>
                                             </div>
                                         </a>
                                     </li>

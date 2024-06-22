@@ -9,7 +9,7 @@
     </div>
     <div class="description_poster">
         <p class="name_poster">{{ p.title_poster }}</p>
-        <p class="description">{{ p.description_poster }}</p>
+        <p class="description">{{ p.description_poster|truncatewords:10 }}</p>
         <div class="poster_parametr">
             <p class="type_poster">
                 <img src="{% static 'afiha/Icons/Janr.svg' %}" alt="Janr">

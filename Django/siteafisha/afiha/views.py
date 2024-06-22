@@ -28,7 +28,7 @@ poster_db = [
 ]
 
 slider_db = [
-    {'id': 1, 'url_image':'https://placehold.co/1000x1000/orange/fff/?text=Hello\nWorld','title_slider': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
+    {'id': 1, 'url_image':'https://placehold.co/1000x1000/orange/fff/?text=Hello\nWorld','title_slider': 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
     {'id': 2, 'url_image':'https://placehold.co/1000x1000/green/fff/?text=Hello\nWorld','title_slider': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
     {'id': 3, 'url_image':'https://placehold.co/1000x1000/black/fff/?text=Hello\nWorld','title_slider': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
     {'id': 4, 'url_image':'https://placehold.co/1000x1000/red/fff/?text=Hello\nWorld','title_slider': 'Lorem ipsum dolor sit amet consectetur adipisicing elit.'},
