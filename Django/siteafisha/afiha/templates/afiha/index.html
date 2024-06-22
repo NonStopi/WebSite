@@ -1,40 +1,5 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="{% static "afiha/css/main.css" %}">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <header>
-        <div class="header_contener">
-            <nav class="navigation">
-                <div class="logo">
-                    <a href="#">
-                        <img src="img/logo.svg" alt="logo" srcset="">
-                    </a>
-                </div>
-                <div class="header_main_menu">
-                    <ul>
-                        <li><a href="">Афиша</a></li>
-                        <li><a href="">Заказ билетов</a></li>
-                        <li><a href="contact.html">Контакты</a></li>
-                        <li><a href="">История дворца</a></li>
-                        <li><a href="">Галерия</a></li>
-                        <li><a href="">Планы залов</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="burger">
-                <span></span>
-            </div>
-        </div>
-    </header>
+{% extends "base.html" %}
+{% block content %}
     <main>
         <section id="event">
             <div class="event_contener">
@@ -95,66 +60,40 @@
                 </a>
             </div>
             <div class="poster_block">
-                <div class="poster_line">
-                    <div class="data_poster">
-                        <p class="p_int">6</p>
-                        <p class="p_string">Мая</p>
-                    </div>
-                    <div class="poster_img">
-                        <img src="img/poster__image1.png" alt="poster__image1">
-                    </div>
-                    <div class="description_poster">
-                        <p class="name_poster">Антонио Вивальди. Времена года</p>
-                        <p class="description">Посвящение Фрэнку Синатре.</p>
-                        <div class="poster_parametr">
-                            <p class="type_poster">
-                                <img src="Icons/Janr.svg" alt="Janr">
-                                Джаз
-                            </p>
-                            <p class="type_poster">
-                                <img src="Icons/Time.svg" alt="Time">
-                                19:00
-                            </p>
-                            <p class="type_poster">
-                                <img src="Icons/age.svg" alt="age">
-                                6+
-                            </p>
+                {% for p in  posts %}
+                {% if p.is_published %}
+                    <div class="poster_line">
+                        <div class="data_poster">
+                            <p class="p_int">{{ p.date_day }}</p>
+                            <p class="p_string">{{ p.date_month }}</p>
+                        </div>
+                        <div class="poster_img">
+                            <img src="img/poster__image1.png" alt="poster__image1">
+                        </div>
+                        <div class="description_poster">
+                            <p class="name_poster">{{ p.title_poster }}</p>
+                            <p class="description">{{ p.description_poster }}</p>
+                            <div class="poster_parametr">
+                                <p class="type_poster">
+                                    <img src="Icons/Janr.svg" alt="Janr">
+                                    Джаз
+                                </p>
+                                <p class="type_poster">
+                                    <img src="Icons/Time.svg" alt="Time">
+                                    19:00
+                                </p>
+                                <p class="type_poster">
+                                    <img src="Icons/age.svg" alt="age">
+                                    6+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="button_post">
+                            <a href="{% url "poster_id" p.id %}">Заказать билет</a>
                         </div>
                     </div>
-                    <div class="button_post">
-                        <button type="button">Заказать билет</button>
-                    </div>
-                </div>
-                <div class="poster_line">
-                    <div class="data_poster">
-                        <p class="p_int">30</p>
-                        <p class="p_string">Сентября</p>
-                    </div>
-                    <div class="poster_img">
-                        <img src="img/poster__image1.png" alt="poster__image1">
-                    </div>
-                    <div class="description_poster">
-                        <p class="name_poster">Антонио Вивальди. Времена года</p>
-                        <p class="description">Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.</p>
-                        <div class="poster_parametr">
-                            <p class="type_poster">
-                                <img src="Icons/Janr.svg" alt="Janr">
-                                Джаз
-                            </p>
-                            <p class="type_poster">
-                                <img src="Icons/Time.svg" alt="Time">
-                                19:00
-                            </p>
-                            <p class="type_poster">
-                                <img src="Icons/age.svg" alt="age">
-                                6+
-                            </p>
-                        </div>
-                    </div>
-                    <div class="button_post">
-                        <button type="button">Заказать билет</button>
-                    </div>
-                </div>
+                {% endif %}
+                {% endfor %}
             </div>
         </section>
         <section id="newsCal">
@@ -270,32 +209,4 @@
             </div>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer_wreaper">
-            <div class="icon"><img src="./img/logo.svg" alt="icon"></div>
-            <div class="even">
-                <h3>Мероприятия</h3>
-                <ul>
-                    <li><a href="">Экскурсии</a></li>
-                    <li><a href="">Концерты</a></li>
-                    <li><a href="">Афиша</a></li>
-                </ul>
-            </div>
-            <div class="contact">
-                <h3>Контакты</h3>
-                <ul>
-                    <li>г. Санкт-Петербург, Невский пр., д.1</li>
-                    <li>shangin67886788@gmail.com</li>
-                    <li>8(880)055355</li>
-                </ul>
-            </div>
-        </div>
-        <div class="watermark">Сайт концертно-экскурсионных программ</div>
-    </footer>
-    <script src="{% static "afiha/js/header.js" %}"></script>
-    <script src="{% static "afiha/js/calendar.js" %}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
-    <script src="{% static "afiha/js/news.js" %}"></script>
-    <script src="{% static "afiha/js/event.js" %}"></script>
-</body>
-</html>
+{% endblock content %}

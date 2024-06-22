@@ -823,10 +823,8 @@ main #poster, main #anons, main #contact, main #program {
   display: flex;
   align-items: center;
 }
-.poster_block .poster_line .button_post button {
-  position: static;
-  width: 175px;
-  height: 51px;
+.poster_block .poster_line .button_post a {
+  padding: 15px 30px;
   border-radius: 50px;
   background: rgb(5, 176, 147);
   color: rgb(255, 255, 255);
@@ -834,9 +832,8 @@ main #poster, main #anons, main #contact, main #program {
   font-size: 16px;
   font-weight: 600;
   line-height: 140%;
-  border: none;
 }
-.poster_block .poster_line .button_post button:hover {
+.poster_block .poster_line .button_post a:hover {
   background: rgb(4, 130, 109);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);

@@ -90,8 +90,8 @@ function createCalendar() {
             mon = (month+1).toString().padStart(2, '0');
             const path = (year >= 2000) && (year <= new Date().getFullYear()) ?  `?date=${date}&month=${mon}&year=${year}/` : "";
             const newUrl = baseUrl + path;
-            console.log(newUrl);
-            //window.location.href = newUrl;
+            //console.log(newUrl);
+            window.location.href = newUrl;
             //console.log(`Выбранная дата: ${year}-${month + 1}-${cell.textContent}`);
         };
         row.appendChild(cell);

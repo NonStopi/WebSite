@@ -244,10 +244,8 @@
             display: flex;
             align-items:center;
 
-            button {
-                position: static;
-                width: 175px;
-                height: 51px;
+            a {
+                padding: 15px 30px;
                 border-radius: 50px;
                 background: rgb(5, 176, 147);
                 color: rgb(255, 255, 255);
@@ -255,7 +253,6 @@
                 font-size: 16px;
                 font-weight: 600;
                 line-height: 140%;
-                border:none;
 
                 &:hover {
                     background: rgb(4, 130, 109);

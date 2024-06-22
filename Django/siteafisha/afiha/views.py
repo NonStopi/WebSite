@@ -2,9 +2,30 @@ from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from django.template.loader import render_to_string
 
-# Create your views here.
+menu = [
+    'Афиша',
+    'Заказ билетов',
+    'Контакты',
+    'История дворца',
+    'Галерия',
+    'Планы Залов',
+]
+
+menu = [
+    {}
+]
+
+data_db = [
+    {'id': 1, 'date_day': '6', 'date_month': 'Мая', 'url_img': '', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.', 'is_published': True},
+    {'id': 2, 'date_day': '30', 'date_month': 'Сентября', 'url_img': '', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре..', 'is_published': True},
+    {'id': 3, 'date_day': '6', 'date_month': 'Мая', 'url_img': '', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.', 'is_published': False},
+]
+
 def index(request):
-    data = {'title': 'Сайт концертно-экскурсионных программ'}
+    data = {
+        'title' : 'Сайт концертно-экскурсионных программ',
+        'posts' : data_db,
+        }
     return render(request, 'afiha/index.html', context=data)
 
 def contact(request):

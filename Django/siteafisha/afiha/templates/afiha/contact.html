@@ -1,36 +1,5 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
-    <title>{{ title }}</title>
-</head>
-<body>
-    <header>
-        <div class="header_contener">
-            <nav class="navigation">
-                <div class="logo">
-                    <a href="#">
-                        <img src="img/logo.svg" alt="logo" srcset="">
-                    </a>
-                </div>
-                <div class="header_main_menu">
-                    <ul>
-                        <li><a href="">Афиша</a></li>
-                        <li><a href="">Заказ билетов</a></li>
-                        <li><a href="contact.html">Контакты</a></li>
-                        <li><a href="">История дворца</a></li>
-                        <li><a href="">Галерия</a></li>
-                        <li><a href="">Планы залов</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <div class="burger">
-                <span></span>
-            </div>
-        </div>
-    </header>
+{% extends "base.html" %}
+{% block content %}
     <main>
         <section id="contact">
             <h1 class="h1_contact">Контакты</h1>
@@ -61,28 +30,4 @@
             <script src="js/map.js"></script>
         </section>
     </main>
-    <footer class="footer">
-        <div class="footer_wreaper">
-            <div class="icon"><img src="./img/logo.svg" alt="icon"></div>
-            <div class="even">
-                <h3>Мероприятия</h3>
-                <ul>
-                    <li><a href="">Экскурсии</a></li>
-                    <li><a href="">Концерты</a></li>
-                    <li><a href="">Афиша</a></li>
-                </ul>
-            </div>
-            <div class="contact">
-                <h3>Контакты</h3>
-                <ul>
-                    <li>г. Санкт-Петербург, Невский пр., д.1</li>
-                    <li>shangin67886788@gmail.com</li>
-                    <li>8(880)055355</li>
-                </ul>
-            </div>
-        </div>
-        <div class="watermark">Сайт концертно-экскурсионных программ</div>
-    </footer>
-    <script src="js/header.js"></script>
-</body>
-</html>
+{% endblock %}
