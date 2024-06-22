@@ -88,7 +88,7 @@ function createCalendar() {
             const baseUrl = window.location.origin + window.location.pathname;
             const date = cell.textContent.padStart(2, '0');
             mon = (month+1).toString().padStart(2, '0');
-            const path = (year >= 2000) && (year <= new Date().getFullYear()) ?  `?date=${date}&month=${mon}&year=${year}/` : "";
+            const path = (year >= 2000) && (year <= new Date().getFullYear()) ?  `search_poster?date=${date}&month=${mon}&year=${year}` : "";
             const newUrl = baseUrl + path;
             window.location.href = newUrl;
             //console.log(`Выбранная дата: ${year}-${month + 1}-${cell.textContent}`);

@@ -1,0 +1,31 @@
+{% load static %}
+<div class="poster_line">
+    <div class="data_poster">
+        <p class="p_int">{{ p.date_day }}</p>
+        <p class="p_string">{{ p.date_month }}</p>
+    </div>
+    <div class="poster_img">
+        <img src="{% static p.url_img %}" alt="poster__image1">
+    </div>
+    <div class="description_poster">
+        <p class="name_poster">{{ p.title_poster }}</p>
+        <p class="description">{{ p.description_poster }}</p>
+        <div class="poster_parametr">
+            <p class="type_poster">
+                <img src="{% static 'afiha/Icons/Janr.svg' %}" alt="Janr">
+                Джаз
+            </p>
+            <p class="type_poster">
+                <img src="{% static "afiha/Icons/Time.svg" %}" alt="Time">
+                19:00
+            </p>
+            <p class="type_poster">
+                <img src="{% static "afiha/Icons/age.svg" %}" alt="age">
+                6+
+            </p>
+        </div>
+    </div>
+    <div class="button_post">
+        <a href="{% url "poster_id" p.id %}">Заказать билет</a>
+    </div>
+</div>

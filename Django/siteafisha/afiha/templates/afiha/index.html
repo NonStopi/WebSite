@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
     <main>
         <section id="event">
@@ -6,46 +7,23 @@
                 <section id="main-carousel" class="splide splide_event">
                     <div class="splide__track">
                         <ul class="splide__list">
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="">
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="">
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="">
-                                </a>
-                            </li>
-                            <li class="splide__slide">
-                                <a href="#">
-                                    <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="">
-                                </a>
-                            </li>
+                            {% for s in slider %}
+                                <li class="splide__slide">
+                                    <a href="{% url "poster_id" s.id %}">
+                                        <img src="{{ s.url_image }}" alt="">
+                                    </a>
+                                </li>
+                            {% endfor %}
                         </ul>
                     </div>
                 </section>
                 <ul class="thumbnails">
-                    <li class="thumbnail">
-                        <img src="https://source.unsplash.com/random/1000x1000?sig=1" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </li>
-                    <li class="thumbnail">
-                        <img src="https://source.unsplash.com/random/1000x1000?sig=2" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </li>
-                    <li class="thumbnail">
-                        <img src="https://source.unsplash.com/random/1000x1000?sig=3" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </li>
-                    <li class="thumbnail">
-                        <img src="https://source.unsplash.com/random/1000x1000?sig=4" alt="">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </li>
+                    {% for th in slider %}
+                        <li class="thumbnail">
+                            <img src="{{ th.url_image }}" alt="">
+                            <p>{{ th.title_slider }}</p>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </section>
@@ -54,7 +32,7 @@
                 <h2 class="h2_poster">Афиша</h2>
                 <a href="">
                     <div class="all_event">
-                        <img src="Icons/calendar.svg" alt="calendar">
+                        <img src="{% static "afiha/Icons/calendar.svg" %}" alt="calendar">
                         <p>Все Мероприятия</p>
                     </div>
                 </a>
@@ -62,36 +40,8 @@
             <div class="poster_block">
                 {% for p in  posts %}
                 {% if p.is_published %}
-                    <div class="poster_line">
-                        <div class="data_poster">
-                            <p class="p_int">{{ p.date_day }}</p>
-                            <p class="p_string">{{ p.date_month }}</p>
-                        </div>
-                        <div class="poster_img">
-                            <img src="img/poster__image1.png" alt="poster__image1">
-                        </div>
-                        <div class="description_poster">
-                            <p class="name_poster">{{ p.title_poster }}</p>
-                            <p class="description">{{ p.description_poster }}</p>
-                            <div class="poster_parametr">
-                                <p class="type_poster">
-                                    <img src="Icons/Janr.svg" alt="Janr">
-                                    Джаз
-                                </p>
-                                <p class="type_poster">
-                                    <img src="Icons/Time.svg" alt="Time">
-                                    19:00
-                                </p>
-                                <p class="type_poster">
-                                    <img src="Icons/age.svg" alt="age">
-                                    6+
-                                </p>
-                            </div>
-                        </div>
-                        <div class="button_post">
-                            <a href="{% url "poster_id" p.id %}">Заказать билет</a>
-                        </div>
-                    </div>
+                {% include "afiha/includes/poster.html" %}
+                    
                 {% endif %}
                 {% endfor %}
             </div>
@@ -103,49 +53,24 @@
                     <div id="splideNews" class="splide splite_news" role="group">
                         <div class="splide__track">
                             <ul class="splide__list">
-                                <li class="splide__slide">
-                                    <a href="">
-                                        <div class="splide__slide__container">
-                                            <img src="img/main_afisha.png" alt="">
-                                            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, voluptatem.</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, asperiores distinctio. Nobis, ratione, nulla cupiditate optio aspernatur nisi ab accusantium deserunt perspiciatis consequuntur delectus itaque repellendus quod animi tempore nihil?</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="splide__slide">
-                                    <a href="">
-                                        <div class="splide__slide__container">
-                                            <img src="img/poster__image1.png" alt="">
-                                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="splide__slide">
-                                    <a href="">
-                                        <div class="splide__slide__container">
-                                            <img src="img/thumb-slider__image.png" alt="">
-                                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="splide__slide">
-                                    <a href="">
-                                        <div class="splide__slide__container">
-                                            <img src="img/thumb-slider__image2.png" alt="">
-                                            <h3>Lorem ipsum dolor sit amet consectetur.</h3>
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat pariatur, eaque sunt atque provident corrupti recusandae adipisci eius eos vel!</p>
-                                        </div>
-                                    </a>
-                                </li>
+                                {% for n in news %}
+                                    <li class="splide__slide">
+                                        <a href="{% url "news_id" n.id %}">
+                                            <div class="splide__slide__container">
+                                                <img src="{{ n.url_image }}" alt="">
+                                                <h3>{{ n.title_news }}</h3>
+                                                <p>{{ n.des_news }}</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                {% endfor %}
                             </ul>
                         </div>
                     </div> 
                 </div>
                 <div class="calendar">
                     <div class="img_cal">
-                        <img src="img/calendar__image.png" alt="">
+                        <img src="{% static "afiha/img/calendar__image.png" %}" alt="">
                         <p>Афиша дня</p>
                     </div>
                     <div class="calendar-container">
@@ -172,7 +97,7 @@
                 <h2 class="h2_anonc">Краткие анонсы</h2>
                 <a href="">
                     <div class="all_event">
-                        <img src="Icons/calendar.svg" alt="calendar">
+                        <img src="{% static "afiha/Icons/calendar.svg" %}" alt="calendar">
                         <p>Все Мероприятия</p>
                     </div>
                 </a>
@@ -209,4 +134,4 @@
             </div>
         </section>
     </main>
-{% endblock content %}
+{% endblock content%}
