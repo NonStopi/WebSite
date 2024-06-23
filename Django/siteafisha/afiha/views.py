@@ -21,10 +21,25 @@ menu = [
     {'title':'Планы залов', 'url_name': 'contact'},
 ]
 
+month_map = {
+    '01': 'Январь',
+    '02': 'Февраль',
+    '03': 'Март',
+    '04': 'Апрель',
+    '05': 'Май',
+    '06': 'Июнь',
+    '07': 'Июль',
+    '08': 'Август',
+    '09': 'Сентябрь',
+    '10': 'Октябрь',
+    '11': 'Ноябрь',
+    '12': 'Декабрь',
+}
+
 poster_db = [
-    {'id': 1, 'date_day': '6', 'date_month': 'Мая', 'url_img': 'afiha/img/main_afisha.png', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.', 'is_published': True},
-    {'id': 2, 'date_day': '30', 'date_month': 'Сентября', 'url_img': 'afiha/img/main_afisha.png', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре..', 'is_published': True},
-    {'id': 3, 'date_day': '6', 'date_month': 'Мая', 'url_img': 'afiha/img/main_afisha.png', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.', 'is_published': False},
+    {'id': 1, 'date_day': '06', 'date_month': '05', 'date_year': '2024', 'url_img': 'afiha/img/main_afisha.png', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.', 'is_published': True},
+    {'id': 2, 'date_day': '30', 'date_month': '09', 'date_year': '2024', 'url_img': 'afiha/img/main_afisha.png', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре.Посвящение Фрэнку Синатре..', 'is_published': True},
+    {'id': 3, 'date_day': '06', 'date_month': '05', 'date_year': '2024', 'url_img': 'afiha/img/main_afisha.png', 'title_poster': 'Антонио Вивальди. Времена года', 'description_poster': 'Посвящение Фрэнку Синатре.', 'is_published': False},
 ]
 
 slider_db = [
@@ -61,37 +76,59 @@ def contact(request):
     return render(request, 'afiha/contact.html', context=data)
 
 def poster(request, poster_id):
-    return HttpResponse(f"<h1>постер №: {poster_id}</h1>")
-
-def poster_name(request, poster_name):
-    return HttpResponse(f"<h1>постер name: {poster_name}</h1>")
+    data_db= {
+        'post' : poster_db,
+    }
+    data = {
+        'menu': menu,
+        'data_post' : data_db,
+        'title' : f'Постер {poster_id}',
+    }
+    return render(request, 'afiha/program.html',context=data)
 
 def search(request):
+    date=request.GET.get("date")
+    month=request.GET.get("month")
+    year=request.GET.get("year")
+
+    if date and (len(date) > 2 or not date.isdigit()):
+        date = "01"
+    if month and (len(month) > 2 or not month.isdigit()):
+        month = "01"
+    if year and (not year.isdigit() or len(year) != 4 or int(year) > 2024):
+        year = "2000"
+
+    filtered_posts = poster_db
+
+    if date:
+        filtered_posts = [post for post in filtered_posts if post['date_day'] == date]
+    if month:
+        filtered_posts = [post for post in filtered_posts if post['date_month'] == month]
+    if year:
+        filtered_posts = [post for post in filtered_posts if post['date_year'] == year]
+
+    if month:
+        month_text = month_map.get(month, '')
+    else:
+        month_text = ''
+
+
+    search_info = {
+        'date': date,
+        'month': month_text,
+        'year': year,
+    }
+
     data = {
         'menu': menu,
         'title' : 'Афиша',
-        'posts' : poster_db,
+        'posts' : filtered_posts,
+        'search_info': search_info,
     }
+
+    print(f"Debug: date={date}, month={month}, year={year}")
+
     return render(request, 'afiha/search.html',context=data)
-
-def search_date(request):
-    date=request.GET.get("date", "01")
-    if len(date)>2:
-        date = "01"
-
-    month=request.GET.get("month", "01")
-    if len(month)>2:
-        month = "01"
-
-    year=request.GET.get("year", "2000")
-    year = int(year)
-    if year > 2024:
-        print(year)
-        return redirect("home", permanent=True)
-    if len(str(year))!=4:
-        year = "2000"
-
-    return HttpResponse(f"<h1>архив даты: {date}.{month}.{year}</h1>")
 
 def news(request, news_id):
     return HttpResponse(f'Новости: {news_id}')
