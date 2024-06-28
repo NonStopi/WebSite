@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static custom_filters %}
 {% block content %}
 <main>
     {% if search_info.date or search_info.month or search_info.year %}
-    <h1>Запрос по дате: {{ search_info.date }}.{{ search_info.month }}.{{ search_info.year }}</h1>
+    <h1>Запрос по дате: {{ search_info.date }}.{{ search_info.month|month_name }}.{{ search_info.year }}</h1>
     {% endif %}
     <section id="poster">
     <div class="poster_block">

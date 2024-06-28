@@ -9,8 +9,8 @@
                         <ul class="splide__list">
                             {% for s in slider %}
                                 <li class="splide__slide">
-                                    <a href="{% url "poster_id" s.id %}">
-                                        <img src="{{ s.url_image }}" alt="">
+                                    <a href="{{ s.get_absolute_url }}">
+                                        <img src="{% static s.url_img %}" alt="">
                                     </a>
                                 </li>
                             {% endfor %}
@@ -20,8 +20,8 @@
                 <ul class="thumbnails">
                     {% for th in slider %}
                         <li class="thumbnail">
-                            <img src="{{ th.url_image }}" alt="">
-                            <p>{{ th.title_slider|truncatewords:10 }}</p>
+                            <img src="{% static th.url_img %}" alt="">
+                            <p>{{ th.title|truncatewords:10 }}</p>
                         </li>
                     {% endfor %}
                 </ul>
@@ -39,10 +39,10 @@
             </div>
             <div class="poster_block">
                 {% for p in  posts %}
-                {% if p.is_published %}
+                
                 {% include "afiha/includes/poster.html" %}
                     
-                {% endif %}
+                
                 {% endfor %}
             </div>
         </section>
