@@ -1,15 +1,15 @@
 {% load static custom_filters %}
 <div class="poster_line">
     <div class="data_poster">
-        <p class="p_int">{{ p.time_creat.day }}</p>
-        <p class="p_string">{{ p.time_creat.month|month_name }}</p>
+        <p class="p_int">{{ p.event_time.day }}</p>
+        <p class="p_string">{{ p.event_time.month|month_name }}</p>
     </div>
     <div class="poster_img">
-        <img src="{% static p.url_img %}" alt="poster__image1">
+        <img src="{% static p.post.url_img %}" alt="poster__image1">
     </div>
     <div class="description_poster">
-        <p class="name_poster">{{ p.title|truncatewords:6 }}</p>
-        <p class="description">{{ p.content|truncatewords:10 }}</p>
+        <p class="name_poster">{{ p.post.title|truncatewords:6 }}</p>
+        <p class="description">{{ p.post.content|truncatewords:15 }}</p>
         <div class="poster_parametr">
             <p class="type_poster">
                 <img src="{% static 'afiha/Icons/Janr.svg' %}" alt="Janr">
@@ -17,7 +17,7 @@
             </p>
             <p class="type_poster">
                 <img src="{% static "afiha/Icons/Time.svg" %}" alt="Time">
-                {{ p.time_creat|date:"H:i" }}
+                {{ p.event_time|date:"H:i" }}
             </p>
             <p class="type_poster">
                 <img src="{% static "afiha/Icons/age.svg" %}" alt="age">
@@ -26,6 +26,6 @@
         </div>
     </div>
     <div class="button_post">
-        <a href="{{ p.get_absolute_url }}">Заказать билет</a>
+        <a href="{{ p.post.get_absolute_url }}">Заказать билет</a>
     </div>
 </div>

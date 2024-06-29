@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static custom_filters %}
 {% block content %}
     <main>
         <section id="event">
@@ -30,7 +30,7 @@
         <section id="poster">
             <div class="header_poster">
                 <h2 class="h2_poster">Афиша</h2>
-                <a href="">
+                <a href="{% url "search" %}">
                     <div class="all_event">
                         <img src="{% static "afiha/Icons/calendar.svg" %}" alt="calendar">
                         <p>Все Мероприятия</p>
@@ -57,9 +57,9 @@
                                     <li class="splide__slide">
                                         <a href="{% url "news_id" n.id %}">
                                             <div class="splide__slide__container">
-                                                <img src="{{ n.url_image }}" alt="">
-                                                <h3>{{ n.title_news|truncatewords:5 }}</h3>
-                                                <p>{{ n.des_news|truncatewords:11 }}</p>
+                                                <img src="{% static n.url_img %}" alt="">
+                                                <h3>{{ n.title|truncatewords:5 }}</h3>
+                                                <p>{{ n.content|truncatewords:11 }}</p>
                                             </div>
                                         </a>
                                     </li>
@@ -95,7 +95,7 @@
         <section id="anons">
             <div class="short_anonc_header">
                 <h2 class="h2_anonc">Краткие анонсы</h2>
-                <a href="">
+                <a href="{% url "search" %}">
                     <div class="all_event">
                         <img src="{% static "afiha/Icons/calendar.svg" %}" alt="calendar">
                         <p>Все Мероприятия</p>
@@ -103,34 +103,15 @@
                 </a>
             </div>
             <div class="short_anonc_main">
+                {% for ans in slider %}
                 <div class="short_anonc_item">
                     <div>
-                        <p class="data_anonc">З</p>
-                        <p class="mount_anonc">ИЮНЯ</p>
+                        <p class="data_anonc">{{ ans.time_creat.day }}</p>
+                        <p class="mount_anonc">{{ ans.time_creat.month|month_name }}</p>
                     </div>
-                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
+                    <p class="name_anonc">{{ ans.title|truncatewords:4 }}</p>
                 </div>
-                <div class="short_anonc_item">
-                    <div>
-                        <p class="data_anonc">З</p>
-                        <p class="mount_anonc">ИЮНЯ</p>
-                    </div>
-                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
-                </div>
-                <div class="short_anonc_item">
-                    <div>
-                        <p class="data_anonc">З</p>
-                        <p class="mount_anonc">ИЮНЯ</p>
-                    </div>
-                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
-                </div>
-                <div class="short_anonc_item">
-                    <div>
-                        <p class="data_anonc">З</p>
-                        <p class="mount_anonc">ИЮНЯ</p>
-                    </div>
-                    <p class="name_anonc">«ВЕК имени СИНАТРЫ»</p>
-                </div>
+                {% endfor %}
             </div>
         </section>
     </main>

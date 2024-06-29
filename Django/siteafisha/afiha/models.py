@@ -6,23 +6,39 @@ class PublishedManager(models.Manager):
         return super().get_queryset().filter(is_published=1)
     
 class Posts(models.Model):
-    title = models.CharField(max_length=255)
+    title = models.CharField(max_length=255, db_index=True)
     content = models.TextField(blank=True)
     url_img = models.TextField(blank=True)
-    time_creat = models.DateTimeField()
+
+    def __str__(self):
+        return str(self.title)
+    
+    def get_absolute_url(self):
+        return reverse("poster_id", kwargs={"poster_id": self.pk})
+    
+
+class Event(models.Model):
+    post = models.ForeignKey('Posts', on_delete=models.PROTECT)
+    event_time = models.DateTimeField()
     is_published = models.BooleanField(default=False)
 
     objects = models.Manager()
     published = PublishedManager()
 
-    def __str__(self):
-        return self.title
-    
     class Meta:
-        ordering = ['-time_creat']
+        ordering = ['-event_time']
         indexes = [
-            models.Index(fields=['-time_creat'])
+            models.Index(fields=['-event_time'])
         ]
-    def get_absolute_url(self):
-        return reverse("poster_id", kwargs={"poster_id": self.pk})
-    
+
+    def __str__(self):
+        return str(self.event_time)
+
+class News(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField(blank=True)
+    url_img = models.TextField(blank=True)
+    time_creats = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.title)
