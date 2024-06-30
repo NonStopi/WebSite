@@ -1,9 +1,14 @@
+from django.utils import timezone
 from django.db import models
 from django.urls import reverse
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(is_published=1)
+    
+class EventManager(models.Manager):
+    def future_events(self):
+        return self.filter(event_time__gt=timezone.now())
     
 class Posts(models.Model):
     title = models.CharField(max_length=255, db_index=True)
@@ -24,6 +29,7 @@ class Event(models.Model):
 
     objects = models.Manager()
     published = PublishedManager()
+    future = EventManager()
 
     class Meta:
         ordering = ['-event_time']

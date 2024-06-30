@@ -11,7 +11,7 @@ function init() {
         balloonContent: "понедельник: выходной<br> вторник-суббота: с 11.00 до 19.00 час. <br>воскресенье: с 11.00 до 17.00 час. <br>перерыв: с 14.00 до 14.30 час."
     },{
         iconLayout: 'default#image',
-		iconImageHref: '../Icons/location.png',
+		iconImageHref: location_img,
 		iconImageSize: [40, 40],
 		iconImageOffset: [-19, -44]
     });

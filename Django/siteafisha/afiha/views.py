@@ -46,7 +46,7 @@ def poster(request, poster_id):
 
 def search(request):
 
-    posts = Event.objects.all()
+    posts = Event.future.future_events()
 
     day=request.GET.get("date")
     month=request.GET.get("month")
@@ -60,20 +60,11 @@ def search(request):
         year = None
 
     if day and month and year:
-        posts = posts.filter(
+        posts = Event.objects.filter(
             event_time__day=day,
             event_time__month=month,
             event_time__year=year
         ) 
-    elif month and year:
-        posts = posts.filter(
-            event_time__month=month,
-            event_time__year=year
-        ) 
-    elif year:
-        posts = posts.filter(
-            event_time__year=year
-        )
 
     search_info = {
         'date': day,
