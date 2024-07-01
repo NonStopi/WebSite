@@ -1,7 +1,8 @@
-import time, datetime
+from django.utils import timezone
 from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, render, redirect
 from django.template.loader import render_to_string
+from django.db.models import Count, Q
 
 from .models import News, Posts, Event
 
@@ -15,9 +16,9 @@ menu = [
 ]
 
 def index(request):
-
+    current_time = timezone.now()
     post = Event.published.all().select_related('post').order_by("-pk")[:2]
-    slider = Posts.objects.all().order_by("-pk")[:4]
+    slider = Posts.objects.annotate(future_event_count=Count('event', filter=Q(event__event_time__gt=current_time))).filter(future_event_count__gt=0).order_by('-future_event_count')[:4]
     news = News.objects.all()
     data = {
         'title' : 'Сайт концертно-экскурсионных программ',
@@ -46,7 +47,7 @@ def poster(request, poster_id):
 
 def search(request):
 
-    posts = Event.future.future_events()
+    posts = Event.future.future_events().select_related('post')
 
     day=request.GET.get("date")
     month=request.GET.get("month")

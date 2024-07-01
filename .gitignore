@@ -1,2 +1,3 @@
 Django/djvenv
 __pycache__*
+docker-compose.yml
