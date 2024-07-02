@@ -5,6 +5,7 @@ from django.template.loader import render_to_string
 from django.db.models import Count, Q
 
 from .models import News, Posts, Event
+from .serializers import PostsSerializer
 
 menu = [
     {'title': 'Афиша', 'url_name': 'search'},
@@ -20,6 +21,9 @@ def index(request):
     post = Event.published.all().select_related('post').order_by("-pk")[:2]
     slider = Posts.objects.annotate(future_event_count=Count('event', filter=Q(event__event_time__gt=current_time))).filter(future_event_count__gt=0).order_by('-future_event_count')[:4]
     news = News.objects.all()
+
+    serializer_class = PostsSerializer
+
     data = {
         'title' : 'Сайт концертно-экскурсионных программ',
         'menu': menu,

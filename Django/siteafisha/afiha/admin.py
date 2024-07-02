@@ -1,18 +1,34 @@
-from django.contrib import admin
-from .models import Posts, Event
+from django.contrib import admin, messages
+from .models import Posts, Event, News
 
 class PostsAdmin(admin.ModelAdmin):
-    list_display = ('id', 'title', 'content', 'url_img')
-    list_display_links = ('id', 'title')
+    list_display = ('title', 'content', 'url_img')
+    list_display_links = ('title', )
     list_per_page = 10
+    search_fields = ['title']
+
 
 class EventAdmin(admin.ModelAdmin):
-    list_display = ('id', 'post', 'event_time', 'is_published')
-    list_display_links = ('id', 'post')
+    list_display = ('post', 'event_time', 'is_published')
+    list_display_links = ('post', )
     ordering = ['-is_published','-event_time']
     list_editable = ('is_published', )
     list_per_page = 10
+    actions = ['set_published', 'set_draft']
+    search_fields = ['post__title']
+    list_filter = ['post__title', 'event_time', 'is_published']
+
+    @admin.display(description='Опубликовать')
+    def set_published(self, request, queryset):
+        count = queryset.update(is_published=Event.Status.PUBLISHED)
+        self.message_user(request, f'Опубликованно{count} записей')
+
+    @admin.display(description='Снять с публикации')
+    def set_draft(self, request, queryset):
+        count = queryset.update(is_published=Event.Status.DRAFT)
+        self.message_user(request, f'Снято с публикации {count} записей', messages.WARNING)
+
 
 admin.site.register(Posts, PostsAdmin)
 admin.site.register(Event, EventAdmin)
-# Register your models here.
+admin.site.register(News)

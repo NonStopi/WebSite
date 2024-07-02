@@ -5,22 +5,22 @@
         <p class="p_string">{{ p.event_time.month|month_name }}</p>
     </div>
     <div class="poster_img">
-        <img src="{% static p.post.url_img %}" alt="poster__image1">
+        <img src="{{ p.post.url_img.url }}" alt="poster__image1">
     </div>
     <div class="description_poster">
         <p class="name_poster">{{ p.post.title|truncatewords:6 }}</p>
         <p class="description">{{ p.post.content|truncatewords:15 }}</p>
         <div class="poster_parametr">
             <p class="type_poster">
-                <img src="{% static 'afiha/Icons/Janr.svg' %}" alt="Janr">
+                <img src="{% static 'afiha/img/Janr.svg' %}" alt="Janr">
                 Джаз
             </p>
             <p class="type_poster">
-                <img src="{% static "afiha/Icons/Time.svg" %}" alt="Time">
+                <img src="{% static "afiha/img/Time.svg" %}" alt="Time">
                 {{ p.event_time|date:"H:i" }}
             </p>
             <p class="type_poster">
-                <img src="{% static "afiha/Icons/age.svg" %}" alt="age">
+                <img src="{% static "afiha/img/age.svg" %}" alt="age">
                 6+
             </p>
         </div>

@@ -13,7 +13,7 @@ class EventManager(models.Manager):
 class Posts(models.Model):
     title = models.CharField(max_length=255, db_index=True, verbose_name='Заголовок')
     content = models.TextField(blank=True, verbose_name='Описание')
-    url_img = models.TextField(blank=True, verbose_name='Картинка')
+    url_img = models.ImageField(upload_to='media/', blank=True, verbose_name='Картинка')
 
     class Meta:
         verbose_name = 'Доступное представление'
@@ -54,7 +54,8 @@ class Event(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    url_img = models.TextField(blank=True)
+    url_img = models.ImageField(upload_to='media/', blank=True)
+    url_img = models.ImageField(upload_to='media/', blank=True)
     time_creats = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

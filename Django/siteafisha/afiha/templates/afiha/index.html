@@ -10,7 +10,7 @@
                             {% for s in slider %}
                                 <li class="splide__slide">
                                     <a href="{{ s.get_absolute_url }}">
-                                        <img src="{% static s.url_img %}" alt="">
+                                        <img src="{{ s.url_img.url }}" alt="">
                                     </a>
                                 </li>
                             {% endfor %}
@@ -20,7 +20,7 @@
                 <ul class="thumbnails">
                     {% for th in slider %}
                         <li class="thumbnail">
-                            <img src="{% static th.url_img %}" alt="">
+                            <img src="{{ th.url_img.url }}" alt="">
                             <p>{{ th.title|truncatewords:10 }}</p>
                         </li>
                     {% endfor %}
@@ -32,7 +32,7 @@
                 <h2 class="h2_poster">Афиша</h2>
                 <a href="{% url "search" %}">
                     <div class="all_event">
-                        <img src="{% static "afiha/Icons/calendar.svg" %}" alt="calendar">
+                        <img src="{% static "afiha/img/calendar.svg" %}" alt="calendar">
                         <p>Все Мероприятия</p>
                     </div>
                 </a>
@@ -57,7 +57,7 @@
                                     <li class="splide__slide">
                                         <a href="{% url "news_id" n.id %}">
                                             <div class="splide__slide__container">
-                                                <img src="{% static n.url_img %}" alt="">
+                                                <img src="{{ n.url_img.url }}" alt="">
                                                 <h3>{{ n.title|truncatewords:5 }}</h3>
                                                 <p>{{ n.content|truncatewords:11 }}</p>
                                             </div>
@@ -97,7 +97,7 @@
                 <h2 class="h2_anonc">Краткие анонсы</h2>
                 <a href="{% url "search" %}">
                     <div class="all_event">
-                        <img src="{% static "afiha/Icons/calendar.svg" %}" alt="calendar">
+                        <img src="{% static "afiha/img/calendar.svg" %}" alt="calendar">
                         <p>Все Мероприятия</p>
                     </div>
                 </a>
