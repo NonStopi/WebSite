@@ -43,9 +43,9 @@ class Event(models.Model):
     class Meta:
         verbose_name = 'Расписание представлений'
         verbose_name_plural = 'Расписание представлений'
-        ordering = ['-event_time']
+        ordering = ['event_time']
         indexes = [
-            models.Index(fields=['-event_time'])
+            models.Index(fields=['event_time'])
         ]
 
     def __str__(self):
@@ -54,7 +54,6 @@ class Event(models.Model):
 class News(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField(blank=True)
-    url_img = models.ImageField(upload_to='media/', blank=True)
     url_img = models.ImageField(upload_to='media/', blank=True)
     time_creats = models.DateTimeField(auto_now_add=True)
 

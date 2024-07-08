@@ -1,13 +1,16 @@
 from django.contrib import admin, messages
 from .models import Posts, Event, News
 
+@admin.register(Posts)
 class PostsAdmin(admin.ModelAdmin):
     list_display = ('title', 'content', 'url_img')
     list_display_links = ('title', )
     list_per_page = 10
     search_fields = ['title']
+    fields = ['title', 'url_img', 'content']
+    save_on_top = True
 
-
+@admin.register(Event)
 class EventAdmin(admin.ModelAdmin):
     list_display = ('post', 'event_time', 'is_published')
     list_display_links = ('post', )
@@ -17,6 +20,7 @@ class EventAdmin(admin.ModelAdmin):
     actions = ['set_published', 'set_draft']
     search_fields = ['post__title']
     list_filter = ['post__title', 'event_time', 'is_published']
+    save_on_top = True
 
     @admin.display(description='Опубликовать')
     def set_published(self, request, queryset):
@@ -29,6 +33,4 @@ class EventAdmin(admin.ModelAdmin):
         self.message_user(request, f'Снято с публикации {count} записей', messages.WARNING)
 
 
-admin.site.register(Posts, PostsAdmin)
-admin.site.register(Event, EventAdmin)
 admin.site.register(News)

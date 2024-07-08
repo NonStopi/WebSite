@@ -6,7 +6,7 @@
             <h1 class="h1_program">{{ post.title }}</h1>
             <div class="program_block">
                 <div class="program_colum program_general">
-                    <img class="img_poster" src="{% static post.url_img %}" alt="Обложка поста">
+                    <img class="img_poster" src="{{ post.url_img.url }}" alt="Обложка поста">
                 </div>
                 <div class="program_colum ">
                     <h2>Санкт-Петербургский камерный оркестр Olympic Orchestra</h2>
@@ -27,8 +27,8 @@
                         <button type="button">Заказать билет</button>
                     </div>
                     <div class="program_photo">
-                        <img src="img/poster__image1.png" alt="poster__image1">
-                        <img src="img/poster__image1.png" alt="poster__image1">
+                        <img src="{{ post.url_img.url }}" alt="poster__image1">
+                        <img src="{{ post.url_img.url }}" alt="poster__image1">
                     </div>
                 </div>
             </div>
