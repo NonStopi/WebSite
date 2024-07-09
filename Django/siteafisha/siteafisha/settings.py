@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j6z+0%7w22hzwo3e*v7@czme=f6era_-$$yy!1ro%wj_qt&9@0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INTERNAL_IPS = ["127.0.0.1",]
 
@@ -89,8 +89,8 @@ DATABASES = {
         'NAME': 'site_afiha',
         'USER': 'master_afiha',
         'PASSWORD': '54321',
-        'HOST': 'localhost',
-        'PORT': '5430',
+        'HOST': '213.226.125.240',
+        'PORT': '5432',
     }
 }
 
@@ -129,8 +129,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
-STAICFILES_DIRS =[ BASE_DIR / 'static']
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
 MEDIA_ROOT = BASE_DIR / 'media'
 MEDIA_URL = '/media/'

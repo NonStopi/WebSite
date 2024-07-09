@@ -85,7 +85,7 @@ function createCalendar() {
             }
             cell.classList.add('selected');
             selectedDate = cell;
-            const baseUrl = window.location.origin + window.location.pathname;
+            const baseUrl = window.location.origin;
             const date = cell.textContent.padStart(2, '0');
             mon = (month+1).toString().padStart(2, '0');
             const path = (year >= 2000) && (year <= new Date().getFullYear()) ?  `${searchUrl}?date=${date}&month=${mon}&year=${year}` : "";

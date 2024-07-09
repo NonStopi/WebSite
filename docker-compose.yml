@@ -7,7 +7,7 @@ services:
       POSTGRES_USER: master_afiha
       POSTGRES_PASSWORD: 54321
     ports:
-      - '5430:5432'
+      - '5432:5432'
     volumes:
       - ./data:/var/lib/postgresql/data
 

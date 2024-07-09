@@ -2,15 +2,12 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.utils import timezone
 from django.http import HttpResponse
-from django.shortcuts import get_object_or_404, render, redirect
-from django.template.loader import render_to_string
 from django.db.models import Count, Q
 from django.views.generic import TemplateView, DetailView, ListView
 
 from .utils import DataMixin
 
 from .models import News, Posts, Event
-from .serializers import PostsSerializer
 
 class Index(DataMixin, TemplateView):
     template_name = "afiha/index.html"

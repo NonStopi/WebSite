@@ -106,8 +106,8 @@
                 {% for ans in slider %}
                 <div class="short_anonc_item">
                     <div>
-                        <p class="data_anonc">{{ ans.time_creat.day }}</p>
-                        <p class="mount_anonc">{{ ans.time_creat.month|month_name }}</p>
+                        <p class="data_anonc">{{ ans.event_time.day }}</p>
+                        <p class="mount_anonc">{{ ans.event_time.month|month_name }}</p>
                     </div>
                     <p class="name_anonc">{{ ans.title|truncatewords:4 }}</p>
                 </div>
